@@ -1,1 +1,13 @@
-<p>product-card-v1 works!</p>
+<div class="card" style="width: 18rem;">
+    <img [src]="producto?.imagen" class="card-img-top" alt="imagen de la persona">
+    <div class="overlay">
+        <div class="card-content">
+            <div class="mt-auto">
+                <h5 class="card-title">
+                    <span class="card-title text-center fw-bold fs-3 text-white">{{producto?.nombre}}</span><br>
+                    <span class="card-title text-center fw-bold fs-5 text-white">{{producto?.precio}}€</span>
+                </h5>
+            </div>
+        </div>
+    </div>
+</div>

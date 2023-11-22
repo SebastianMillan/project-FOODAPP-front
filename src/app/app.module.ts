@@ -22,7 +22,6 @@ import { AdminNavbarComponent } from './components/admin-navbar/admin-navbar.com
 import { VerticalCategoryListComponent } from './components/vertical-category-list/vertical-category-list.component';
 import { CategoryRowComponent } from './components/category-row/category-row.component';
 import { AdminVerticalProductListComponent } from './components/admin-vertical-product-list/admin-vertical-product-list.component';
-import { VerticalRowComponent } from './components/vertical-row/vertical-row.component';
 import { VerticalClientListComponent } from './components/vertical-client-list/vertical-client-list.component';
 import { ClientRowComponent } from './components/client-row/client-row.component';
 import { ProductRowComponent } from './components/product-row/product-row.component';
@@ -48,6 +47,7 @@ import { AdminClientDetailPageComponent } from './ui/admin-client-detail-page/ad
 import { AdminWorkersPageComponent } from './ui/admin-workers-page/admin-workers-page.component';
 import { DeliveryPageComponent } from './ui/delivery-page/delivery-page.component';
 import { CookPageComponent } from './ui/cook-page/cook-page.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -71,7 +71,6 @@ import { CookPageComponent } from './ui/cook-page/cook-page.component';
     VerticalCategoryListComponent,
     CategoryRowComponent,
     AdminVerticalProductListComponent,
-    VerticalRowComponent,
     VerticalClientListComponent,
     ClientRowComponent,
     ProductRowComponent,
@@ -100,10 +99,8 @@ import { CookPageComponent } from './ui/cook-page/cook-page.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
-  ],
-  providers: [
-    provideClientHydration()
+    AppRoutingModule,
+    HttpClientModule
   ],
   bootstrap: [AppComponent]
 })
