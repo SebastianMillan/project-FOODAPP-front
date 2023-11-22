@@ -14,7 +14,7 @@ export class AdminWorkersPageComponent implements OnInit {
 
   ngOnInit(): void {
     this.trabajadorService.getTrabajadoresList().subscribe(resp => {
-      this.trabajadorList = [resp];
+      this.trabajadorList = resp;
     })
   }
 
