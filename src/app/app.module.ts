@@ -48,6 +48,7 @@ import { AdminClientDetailPageComponent } from './ui/admin-client-detail-page/ad
 import { AdminWorkersPageComponent } from './ui/admin-workers-page/admin-workers-page.component';
 import { DeliveryPageComponent } from './ui/delivery-page/delivery-page.component';
 import { CookPageComponent } from './ui/cook-page/cook-page.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -100,7 +101,8 @@ import { CookPageComponent } from './ui/cook-page/cook-page.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgbModule
   ],
   providers: [
     provideClientHydration()
