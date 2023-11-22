@@ -8,17 +8,17 @@ import { TrabajadorServiceTsService } from '../../services/trabajador.service.ts
   styleUrl: './admin-workers-page.component.css'
 })
 export class AdminWorkersPageComponent implements OnInit {
-  trabajadorList!: TrabajadorResponse;
+  trabajadorList: TrabajadorResponse[] = [];
 
   constructor(private trabajadorService: TrabajadorServiceTsService) { }
 
   ngOnInit(): void {
     this.trabajadorService.getTrabajadoresList().subscribe(resp => {
-      this.trabajadorList = resp;
+      this.trabajadorList = [resp];
     })
   }
 
-  setTrabajador(): TrabajadorResponse {
+  setTrabajador(): TrabajadorResponse[] {
     return this.trabajadorList;
 
   }
