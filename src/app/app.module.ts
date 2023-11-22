@@ -22,7 +22,6 @@ import { AdminNavbarComponent } from './components/admin-navbar/admin-navbar.com
 import { VerticalCategoryListComponent } from './components/vertical-category-list/vertical-category-list.component';
 import { CategoryRowComponent } from './components/category-row/category-row.component';
 import { AdminVerticalProductListComponent } from './components/admin-vertical-product-list/admin-vertical-product-list.component';
-import { VerticalRowComponent } from './components/vertical-row/vertical-row.component';
 import { VerticalClientListComponent } from './components/vertical-client-list/vertical-client-list.component';
 import { ClientRowComponent } from './components/client-row/client-row.component';
 import { ProductRowComponent } from './components/product-row/product-row.component';
@@ -72,7 +71,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     VerticalCategoryListComponent,
     CategoryRowComponent,
     AdminVerticalProductListComponent,
-    VerticalRowComponent,
+
     VerticalClientListComponent,
     ClientRowComponent,
     ProductRowComponent,
