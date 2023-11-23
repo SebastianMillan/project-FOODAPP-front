@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { CategoriaRowResponse } from '../../models/categoria-row.interface';
 
 @Component({
   selector: 'app-category-row',
@@ -7,4 +8,5 @@ import { Component } from '@angular/core';
 })
 export class CategoryRowComponent {
 
+  @Input() categoria: CategoriaRowResponse | undefined;
 }

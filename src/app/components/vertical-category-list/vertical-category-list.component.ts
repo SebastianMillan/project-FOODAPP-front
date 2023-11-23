@@ -1,10 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { CategoriaService } from '../../services/categoria.service';
+import { CategoriaRowResponse } from '../../models/categoria-row.interface';
 
 @Component({
   selector: 'app-vertical-category-list',
   templateUrl: './vertical-category-list.component.html',
   styleUrl: './vertical-category-list.component.css'
 })
-export class VerticalCategoryListComponent {
+export class VerticalCategoryListComponent{
+
+  @Input() listCategoria: CategoriaRowResponse [] = [];
 
 }

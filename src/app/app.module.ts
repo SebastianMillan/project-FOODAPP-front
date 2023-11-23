@@ -99,7 +99,8 @@ import { BrowserModule } from '@angular/platform-browser';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [provideHttpClient(withFetch())],
   bootstrap: [AppComponent]
