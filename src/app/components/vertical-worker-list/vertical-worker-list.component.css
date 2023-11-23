@@ -1,41 +1,49 @@
 .custom-table-container {
     width: 100%;
-    /* Ajusta el ancho de la tabla */
     height: 500px;
-    /* Ajusta la altura de la tabla */
+
 }
 
 .table {
     --bs-table-color: white;
-    /* Cambia el color de texto a blanco */
     --bs-table-bg: rgb(0, 0, 0);
-    /* Cambia el color de fondo a negro */
     --bs-table-border-color: rgb(255, 255, 255);
-    /* Cambia el color del borde a rojo */
-    /* Agrega cualquier otro estilo personalizado que desees aplicar */
-}
 
+}
 
 .rounded-button {
     border-radius: 20px;
-    /* Establece el radio de borde para hacer el botón redondeado */
     padding: 10px 20px;
-    /* Establece el espacio interno del botón */
     font-weight: bold;
-    /* Establece el peso de la fuente como negrita */
-
-    /* Estilos para el botón con fondo verde */
     background-color: green;
     color: white;
+    cursor: pointer;
 }
 
 .rounded-buttonred {
-    /* Estilos para el botón con fondo rojo */
     border-radius: 50px;
-    /* Establece el radio de borde para hacer el botón redondeado */
     padding: 10px 20px;
-    /* Establece el espacio interno del botón */
     font-weight: bold;
     background-color: red;
     color: white;
+    cursor: pointer;
+}
+
+.no-background-button {
+    background-color: transparent;
+    /* Establece el fondo del botón como transparente */
+    border: none;
+    /* Elimina el borde del botón */
+    padding: 0;
+    /* Elimina el espacio interno del botón */
+    cursor: pointer;
+    /* Cambia el cursor al pasar por encima del botón */
+
+    /* Estilos para el icono SVG */
+    color: gold;
+    /* Establece el color del icono como dorado */
+    width: 16px;
+    /* Establece el ancho del icono */
+    height: 16px;
+    /* Establece la altura del icono */
 }
