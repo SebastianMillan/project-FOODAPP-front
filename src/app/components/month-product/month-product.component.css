@@ -1,0 +1,9 @@
+.bg-image{
+    height: 500px;
+    background-size: 100% auto;
+}
+.vertical-center {
+    text-align: center;
+    padding-top: 180px;
+    
+}

@@ -1,1 +1,9 @@
-<p>month-product works!</p>
+<div class="text-center bg-image"
+    style="background-image: url('{{producto?.imagen}}');">
+    <div class="vertical-center">
+        <h1 class="fw-bold text-white">HAMBURGUESA DEL MES</h1>
+        <h2 class="text-white">{{producto?.nombre}} {{producto?.precio}}€</h2>
+        <span class="fst-italic text-white">{{producto?.descripcion}}</span><br>
+        <button type="button" class="btn btn-warning mt-3 border-1 border border-black">Añadir al carrito</button>
+    </div>
+</div>
