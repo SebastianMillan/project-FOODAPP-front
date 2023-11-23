@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { ProductCardResponse } from '../../models/product-card.interface';
 
 @Component({
   selector: 'app-horizontal-product-list',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrl: './horizontal-product-list.component.css'
 })
 export class HorizontalProductListComponent {
-
+  @Input() listProducto: ProductCardResponse[] = [];
 }

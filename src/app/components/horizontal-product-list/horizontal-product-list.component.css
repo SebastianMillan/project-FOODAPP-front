@@ -1,0 +1,10 @@
+.bg-image {
+    width: 100px;
+    height: 400px;
+    background-size: 100% auto;
+}
+
+.vertical-center {
+    text-align: center;
+    padding-top: 180px;
+}

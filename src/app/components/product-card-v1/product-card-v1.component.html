@@ -1,1 +1,15 @@
-<p>product-card-v1 works!</p>
+<div class="card" style="width: 18rem;">
+    <img src={{producto?.imagen}} class="card-img-top" alt="imagen de la persona">
+    <div class="overlay">
+        <div class="card-content">
+            <div class="mt-auto">
+                <h5 class="card-title">
+                    <button type="button" class="btn btn-warning mt-3 border-1 mx-auto border border-black">Añadir al
+                        carrito</button>
+                    <span class="card-title text-center fw-bold fs-5 text-white">{{producto?.nombre}} -
+                        {{producto?.precio}}€</span>
+                </h5>
+            </div>
+        </div>
+    </div>
+</div>
