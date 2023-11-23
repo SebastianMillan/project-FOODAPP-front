@@ -11,10 +11,10 @@ export class TrabajadorServiceTsService {
   constructor(private http: HttpClient) { }
 
   getTrabajadoresList(): Observable<TrabajadorResponse[]> {
-    return this.http.get<TrabajadorResponse[]>('http://8080/trabajador/',
+    return this.http.get<TrabajadorResponse[]>('http://localhost:8080/trabajador/',
       {
         headers: {
-          'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJjMGE4MDAwYi04YmY4LTEwMmUtODE4Yi1mODYxOGMyZTAwMGIiLCJpYXQiOjE3MDA2NzkyMzEsImV4cCI6MTcwMDc2NTYzMX0.uBEy89uJNpODR9IW6EZZfI3bDjjOur23rv42G82CxGjX2_zGxtMiegYanDWnLwXLTZpsjdu-gYnrC86kQn6LBw'
+          'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhYzE5ZTAwMS04YmZiLTE3ZTItODE4Yi1mYjI5MzE4ODAwMGIiLCJpYXQiOjE3MDA3MjU4ODIsImV4cCI6MTcwMDgxMjI4Mn0.or2eWumC22DNhIrx66xXUuqvVufhEjBGmpOLF_1-e7_jiPKF9rzEXlfqI6py47CzDDHFk7NgKZxRmwpSQ169fA'
         }
       });
   }

@@ -1,1 +1,3 @@
-<p>vertical-worker-list works!</p>
+@for (trabajador of trabajadorList; track $index) {
+<app-worker-row [trabajador]="trabajador"></app-worker-row>
+}

@@ -48,6 +48,7 @@ import { AdminWorkersPageComponent } from './ui/admin-workers-page/admin-workers
 import { DeliveryPageComponent } from './ui/delivery-page/delivery-page.component';
 import { CookPageComponent } from './ui/cook-page/cook-page.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { provideHttpClient, withFetch } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -71,7 +72,6 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     VerticalCategoryListComponent,
     CategoryRowComponent,
     AdminVerticalProductListComponent,
-
     VerticalClientListComponent,
     ClientRowComponent,
     ProductRowComponent,
@@ -104,6 +104,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     NgbModule
   ],
   providers: [
+    provideHttpClient(withFetch()),
     provideClientHydration()
   ],
   bootstrap: [AppComponent]
