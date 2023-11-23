@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { TrabajadorResponse } from '../../models/Get-trabajador-list.interface';
+import { Trabajador, TrabajadorResponse } from '../../models/Get-trabajador-list.interface';
 import { TrabajadorServiceTsService } from '../../services/trabajador.service.ts.service';
 
 @Component({
@@ -8,13 +8,13 @@ import { TrabajadorServiceTsService } from '../../services/trabajador.service.ts
   styleUrl: './vertical-worker-list.component.css'
 })
 export class VerticalWorkerListComponent implements OnInit {
-  trabajadorList: TrabajadorResponse[] = [];
+  trabajadorList!: Trabajador[];
 
   constructor(private trabajadorService: TrabajadorServiceTsService) { }
 
   ngOnInit(): void {
     this.trabajadorService.getTrabajadoresList().subscribe(resp => {
-      this.trabajadorList = resp;
+      this.trabajadorList = resp.content;
     })
   }
 

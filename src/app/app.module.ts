@@ -46,13 +46,9 @@ import { AdminClientDetailPageComponent } from './ui/admin-client-detail-page/ad
 import { AdminWorkersPageComponent } from './ui/admin-workers-page/admin-workers-page.component';
 import { DeliveryPageComponent } from './ui/delivery-page/delivery-page.component';
 import { CookPageComponent } from './ui/cook-page/cook-page.component';
-<<<<<<< HEAD
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { provideHttpClient, withFetch } from '@angular/common/http';
-=======
-import { HttpClientModule, provideHttpClient, withFetch } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
->>>>>>> main
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -107,14 +103,7 @@ import { BrowserModule } from '@angular/platform-browser';
     AppRoutingModule,
     NgbModule
   ],
-<<<<<<< HEAD
-  providers: [
-    provideHttpClient(withFetch()),
-    provideClientHydration()
-  ],
-=======
   providers: [provideHttpClient(withFetch())],
->>>>>>> main
   bootstrap: [AppComponent]
 })
 export class AppModule { }
