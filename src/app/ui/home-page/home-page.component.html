@@ -1,1 +1,11 @@
 <app-month-product></app-month-product>
+<div class="container">
+    <div class="my-2">
+        <h2 class="text-white">Novedades</h2>
+        <app-horizontal-product-list [listProducto]="newsProduct"></app-horizontal-product-list>
+    </div>
+    <div class="mb-2">
+        <h2 class="text-white">Ofertas</h2>
+        <app-horizontal-product-list [listProducto]="offerProduct"></app-horizontal-product-list>
+    </div>
+</div>

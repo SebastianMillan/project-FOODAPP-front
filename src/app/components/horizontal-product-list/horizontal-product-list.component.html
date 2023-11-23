@@ -1,1 +1,4 @@
-<p>horizontal-product-list works!</p>
+<ul class="list-group list-group-horizontal position-relative overflow-auto">
+    <app-product-card-v1 *ngFor="let p of listProducto" [producto]="p"
+        class="m-0 p-0"></app-product-card-v1>
+</ul>
