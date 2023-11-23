@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Trabajador, TrabajadorResponse } from '../../models/Get-trabajador-list.interface';
+import { Trabajador } from '../../models/Get-trabajador-list.interface';
 import { TrabajadorServiceTsService } from '../../services/trabajador.service.ts.service';
 
 @Component({
