@@ -1,7 +1,7 @@
 <div class="container">
     <div class="d-flex justify-content-center">
-        <div style="max-width: 200px;">
-            <table class="table">
+        <div class="custom-table-container">
+            <table class="table custom-table">
                 <thead>
                     <tr>
                         <th scope="col">NOMBRE</th>
@@ -17,7 +17,7 @@
                         <td>{{trabajador.nombre}}</td>
                         <td>{{trabajador.puesto}}</td>
                         <td>
-                            <button>
+                            <button class="rounded-button">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                     class="bi bi-pencil" viewBox="0 0 16 16">
                                     <path
@@ -26,7 +26,7 @@
                             </button>
                         </td>
                         <td>
-                            <button>
+                            <button class="rounded-buttonred">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                     class="bi bi-trash" viewBox="0 0 16 16">
                                     <path
@@ -40,12 +40,6 @@
                     }
                 </tbody>
             </table>
-
-
-
-
-
-
             <nav class="d-flex justify-content-center mt-2">
                 <ngb-pagination [collectionSize]="numMTarabajadores" [pageSize]="20" [maxSize]="3" [rotate]="true"
                     [(page)]="numPage" (pageChange)="loadNewPage()" class="align-self-centers"

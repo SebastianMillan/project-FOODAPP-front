@@ -14,7 +14,7 @@ export class TrabajadorServiceTsService {
     return this.http.get<TrabajadorResponse>('http://localhost:8080/trabajador/',
       {
         headers: {
-          'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhYzE5ZTAwMS04YmZjLTEzNmYtODE4Yi1mYzMzZDExYjAwMGMiLCJpYXQiOjE3MDA3NDMzNDAsImV4cCI6MTcwMDgyOTc0MH0.RJhNNVApL5FW8xrFB_PgDZ_ZxkMbzfpgIYAChqSm9sYGLUo9k9v2sOVw3cBvWJiFSYiqELg7rr765_KEqI9A5Q'
+          'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJjMGE4MDAwYi04YmZjLTFjN2QtODE4Yi1mY2VjYjk3NjAwMGMiLCJpYXQiOjE3MDA3NTU0NjAsImV4cCI6MTcwMDg0MTg2MH0.6t8oFxFefAkQRWgx6SMCti8kf_pg7yzToXqjNRTCjpmn81lROFMRwivbc1xq_Gm-7WLz65kaqoRpbF5-GgEc4w'
         }
       });
   }
