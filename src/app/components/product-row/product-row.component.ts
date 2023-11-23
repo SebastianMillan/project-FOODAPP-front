@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { ProductRowResponse } from '../../models/product-row.interface';
 
 @Component({
   selector: 'app-product-row',
@@ -6,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrl: './product-row.component.css'
 })
 export class ProductRowComponent {
+
+  @Input() product!: ProductRowResponse;
 
 }
