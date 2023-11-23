@@ -8,6 +8,7 @@ import { Router } from '@angular/router';
   styleUrl: './login-page.component.css'
 })
 export class LoginPageComponent {
+  
   username = '';
   password = '';
 
@@ -16,7 +17,6 @@ export class LoginPageComponent {
   login() {
 
     this.accountService.loginAccount(this.username, this.password).subscribe(resp => {
-      
       localStorage.setItem('token', resp.token); 
       this.router.navigateByUrl('/home');
     })

@@ -14,10 +14,10 @@ export class AccountService {
   loginAccount(username: string, password: string): Observable<UserLoginResponse>{
     return this.http.post<UserLoginResponse>(`${environment.apiBaseUrl}/auth/login}`, {
       username: username,
-      password: password,
+      password: password
     }, {
       headers: {
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',        
       }
     })
   }
