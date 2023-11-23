@@ -15,9 +15,13 @@ export class VerticalWorkerListComponent implements OnInit {
   constructor(private trabajadorService: TrabajadorServiceTsService) { }
 
   ngOnInit(): void {
+    this.loadNewPage();
+  }
+
+  loadNewPage(): void {
     this.trabajadorService.getTrabajadoresList(this.numPage).subscribe(resp => {
       this.trabajadorList = resp.content;
-      this.numMTarabajadores = resp.numberOfElements;
+      this.numMTarabajadores = resp.totalElements;
     })
   }
 

@@ -1,20 +1,14 @@
 <div class="container">
     <div class="d-flex justify-content-center align-items-center" style="height: 100vh;">
         <div style="max-width: 600px;">
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th scope="col">NOMBRE</th>
-                        <th scope="col">PUESTO</th>
-                    </tr>
-                </thead>
-                @for (trabajador of trabajadorList; track $index) {
-                <app-worker-row [trabajador]="trabajador"></app-worker-row>
-                }
-            </table>
+
+            @for (trabajador of trabajadorList; track $index) {
+            <app-worker-row [trabajador]="trabajador"></app-worker-row>
+            }
+
             <nav class="d-flex justify-content-center mt-2">
                 <ngb-pagination [collectionSize]="numMTarabajadores" [pageSize]="20" [maxSize]="3" [rotate]="true"
-                    [(page)]="numPage" (pageChange)="ngOnInit()" class="align-self-centers"
+                    [(page)]="numPage" (pageChange)="loadNewPage()" class="align-self-centers"
                     aria-label="Default pagination"></ngb-pagination>
             </nav>
         </div>
