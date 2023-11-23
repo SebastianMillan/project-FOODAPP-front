@@ -9,12 +9,15 @@ import { TrabajadorServiceTsService } from '../../services/trabajador.service.ts
 })
 export class VerticalWorkerListComponent implements OnInit {
   trabajadorList!: Trabajador[];
+  numPage = 1;
+  numMTarabajadores = 0;
 
   constructor(private trabajadorService: TrabajadorServiceTsService) { }
 
   ngOnInit(): void {
-    this.trabajadorService.getTrabajadoresList().subscribe(resp => {
+    this.trabajadorService.getTrabajadoresList(this.numPage).subscribe(resp => {
       this.trabajadorList = resp.content;
+      this.numMTarabajadores = resp.numberOfElements;
     })
   }
 

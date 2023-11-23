@@ -12,6 +12,11 @@
                 <app-worker-row [trabajador]="trabajador"></app-worker-row>
                 }
             </table>
+            <nav class="d-flex justify-content-center mt-2">
+                <ngb-pagination [collectionSize]="numMTarabajadores" [pageSize]="20" [maxSize]="3" [rotate]="true"
+                    [(page)]="numPage" (pageChange)="ngOnInit()" class="align-self-centers"
+                    aria-label="Default pagination"></ngb-pagination>
+            </nav>
         </div>
     </div>
 </div>

@@ -10,7 +10,7 @@ export class TrabajadorServiceTsService {
 
   constructor(private http: HttpClient) { }
 
-  getTrabajadoresList(): Observable<TrabajadorResponse> {
+  getTrabajadoresList(numPage: number): Observable<TrabajadorResponse> {
     return this.http.get<TrabajadorResponse>('http://localhost:8080/trabajador/',
       {
         headers: {
