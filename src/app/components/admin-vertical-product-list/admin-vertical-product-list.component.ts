@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-admin-vertical-product-list',
@@ -7,4 +8,10 @@ import { Component } from '@angular/core';
 })
 export class AdminVerticalProductListComponent {
 
+  nombreCategoria!: string;
+  route: ActivatedRoute = inject(ActivatedRoute);
+
+  constructor() {
+    this.nombreCategoria = this.route.snapshot.params['nombreCategoria'];
+  }
 }
