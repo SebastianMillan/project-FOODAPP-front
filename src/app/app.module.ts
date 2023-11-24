@@ -1,5 +1,4 @@
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RegisterComponent } from './components/register/register.component';
@@ -45,7 +44,7 @@ import { AdminClientDetailPageComponent } from './ui/admin-client-detail-page/ad
 import { AdminWorkersPageComponent } from './ui/admin-workers-page/admin-workers-page.component';
 import { DeliveryPageComponent } from './ui/delivery-page/delivery-page.component';
 import { CookPageComponent } from './ui/cook-page/cook-page.component';
-import { provideHttpClient, withFetch } from '@angular/common/http';
+import { HttpClientModule, provideHttpClient, withFetch } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
@@ -101,6 +100,7 @@ import { FormsModule } from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     NgbModule,
+    HttpClientModule,
     FormsModule
   ],
   providers: [provideHttpClient(withFetch())],
