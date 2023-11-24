@@ -1,8 +1,6 @@
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { HorizontalProductListComponent } from './components/horizontal-product-list/horizontal-product-list.component';
 import { VerticalCategoryWithProductListComponent } from './components/vertical-category-with-product-list/vertical-category-with-product-list.component';
@@ -46,14 +44,14 @@ import { AdminClientDetailPageComponent } from './ui/admin-client-detail-page/ad
 import { AdminWorkersPageComponent } from './ui/admin-workers-page/admin-workers-page.component';
 import { DeliveryPageComponent } from './ui/delivery-page/delivery-page.component';
 import { CookPageComponent } from './ui/cook-page/cook-page.component';
-import { provideHttpClient, withFetch } from '@angular/common/http';
+import { HttpClientModule, provideHttpClient, withFetch } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent,
     RegisterComponent,
     HorizontalProductListComponent,
     VerticalCategoryWithProductListComponent,
@@ -96,12 +94,14 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     AdminClientDetailPageComponent,
     AdminWorkersPageComponent,
     DeliveryPageComponent,
-    CookPageComponent
+    CookPageComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [provideHttpClient(withFetch())],
   bootstrap: [AppComponent]
