@@ -49,7 +49,7 @@ import { AdminWorkersPageComponent } from './ui/admin-workers-page/admin-workers
 import { DeliveryPageComponent } from './ui/delivery-page/delivery-page.component';
 import { CookPageComponent } from './ui/cook-page/cook-page.component';
 import { HttpClientModule } from '@angular/common/http';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 
 @NgModule({
   declarations: [
@@ -104,7 +104,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    NgbModule
+
   ],
   providers: [
     provideClientHydration()
