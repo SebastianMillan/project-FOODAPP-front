@@ -11,12 +11,12 @@ export class CategoryService {
 
   constructor(private http: HttpClient) { }
 
-  getProdctCategory(nombreCategoria: string): Observable<ProductRowResponse[]>{
+  getProdctCategory(nombreCategoria: string): Observable<ProductRowResponse[]> {
     return this.http.get<ProductRowResponse[]>(`${environment.apiBaseUrl}/trabajador/producto/${nombreCategoria}`,
-    {
-      headers: {
-        'Authorization': `Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhYzE5YzAwMS04YmZkLTEyNjEtODE4Yi1mZDcyOTRjNTAwMGMiLCJpYXQiOjE3MDA3NjQyMzEsImV4cCI6MTcwMDg1MDYzMX0.to7ofmcDvDRsNqCbAxGh5KcWj9dtHnJKjGDRBruvX5CUyrx-7VNjaJU1yQ7uHX2R53MIKs9b1DciO-M4i-5bFA`
-    }
-  });
+      {
+        headers: {
+          'Authorization': `Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhYzFjZTAwMS04YzAwLTFhZTUtODE4Yy0wMDViNjY1NDAwMGMiLCJpYXQiOjE3MDA4MTMwNTgsImV4cCI6MTcwMDg5OTQ1OH0.EWCk_zeD0IQWnG-qYqwXX64ZZ9jOaeBAt7ZDA0iFS4eHU6FrmpOv0aSShOuKyWowoOl_O0lOGd07jkeFCGz7LA`
+        }
+      });
   }
 }
