@@ -16,7 +16,7 @@ export class LoginPageComponent {
   login() {
 
     this.accountService.loginAccount(this.username, this.password).subscribe(resp => {
-      
+      localStorage.setItem('account_id',resp.id)
       localStorage.setItem('token', resp.token); 
       this.router.navigateByUrl('/home');
     })

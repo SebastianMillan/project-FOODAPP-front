@@ -12,7 +12,7 @@ export class AccountService {
   constructor(private http: HttpClient) { }
 
   loginAccount(username: string, password: string): Observable<UserLoginResponse>{
-    return this.http.post<UserLoginResponse>(`${environment.apiBaseUrl}/auth/login}`, {
+    return this.http.post<UserLoginResponse>(`${environment.apiBaseUrl}/auth/login`, {
       username: username,
       password: password,
     }, {
