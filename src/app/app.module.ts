@@ -1,5 +1,4 @@
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
@@ -48,6 +47,7 @@ import { DeliveryPageComponent } from './ui/delivery-page/delivery-page.componen
 import { CookPageComponent } from './ui/cook-page/cook-page.component';
 import { HttpClientModule, provideHttpClient, withFetch } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -100,7 +100,9 @@ import { BrowserModule } from '@angular/platform-browser';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    NgbModule,
+    HttpClientModule,
+
   ],
   providers: [provideHttpClient(withFetch())],
   bootstrap: [AppComponent]
