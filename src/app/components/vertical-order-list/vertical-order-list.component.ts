@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { PedidoShort } from '../../models/client-detail.interface';
 
 @Component({
   selector: 'app-vertical-order-list',
@@ -7,4 +8,5 @@ import { Component } from '@angular/core';
 })
 export class VerticalOrderListComponent {
 
+  @Input() listPedido: PedidoShort[] | undefined;
 }
