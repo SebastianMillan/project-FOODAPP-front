@@ -5,12 +5,14 @@ import { AdminCategoriesPageComponent } from './ui/admin-categories-page/admin-c
 import { LoginPageComponent } from './ui/login-page/login-page.component';
 import { RegisterPageComponent } from './ui/register-page/register-page.component';
 import { AdminWorkersPageComponent } from './ui/admin-workers-page/admin-workers-page.component';
+import { AdminClientDetailPageComponent } from './ui/admin-client-detail-page/admin-client-detail-page.component';
 
 const routes: Routes = [
   { path: 'home', component: HomePageComponent },
   { path: 'admin/trabajador', component: AdminWorkersPageComponent },
   { path: 'admin/categorias', component: AdminCategoriesPageComponent },
   { path: 'login', component: LoginPageComponent },
+  { path: 'admin/cliente/:id', component: AdminClientDetailPageComponent },
   { path: 'register', component: RegisterPageComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: '**', component: HomePageComponent },
