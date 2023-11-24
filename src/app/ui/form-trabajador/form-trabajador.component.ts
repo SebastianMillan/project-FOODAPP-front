@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { TrabajadorServiceTsService } from '../../services/trabajador.service.ts.service';
-import { Router } from 'express';
+
 
 @Component({
   selector: 'app-form-trabajador',
