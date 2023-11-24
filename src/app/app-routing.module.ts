@@ -1,13 +1,15 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomePageComponent } from './ui/home-page/home-page.component';
+import { AdminWorkersPageComponent } from './ui/admin-workers-page/admin-workers-page.component';
 import { AdminVerticalProductListComponent } from './components/admin-vertical-product-list/admin-vertical-product-list.component';
 
 const routes: Routes = [
   { path: 'home', component: HomePageComponent },
-  { path: 'product-category/:nombreCategoria', component: AdminVerticalProductListComponent},
+  { path: 'product-category/:nombreCategoria', component: AdminVerticalProductListComponent },
+  { path: 'admin-trabajador', component: AdminWorkersPageComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
-  { path: '**', component: HomePageComponent }
+  { path: '**', component: HomePageComponent },
 ];
 
 @NgModule({
