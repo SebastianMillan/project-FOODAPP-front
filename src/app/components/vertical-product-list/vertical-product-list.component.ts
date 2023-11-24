@@ -8,18 +8,5 @@ import { ActivatedRoute } from '@angular/router';
   templateUrl: './vertical-product-list.component.html',
   styleUrl: './vertical-product-list.component.css'
 })
-export class VerticalProductListComponent implements OnInit{
-  productList: ProductRowResponse[] = [];
-  nombreCategoria!: string;
-  route: ActivatedRoute = inject(ActivatedRoute);
-
-  constructor(private service: CategoryService){ 
-    this.nombreCategoria = this.route.snapshot.params['nombreCategoria'];
-  }
-
-  ngOnInit(): void {
-    this.service.getProdctCategory(this.nombreCategoria).subscribe(resp => 
-      this.productList = resp);
-      console.log(this.productList)
-  }
+export class VerticalProductListComponent {
 }

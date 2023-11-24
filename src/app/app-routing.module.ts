@@ -9,7 +9,7 @@ import { AdminVerticalProductListComponent } from './components/admin-vertical-p
 
 const routes: Routes = [
   { path: 'home', component: HomePageComponent },
-  { path: 'product/category/:nombreCategoria', component: AdminVerticalProductListComponent },
+  { path: 'admin/categorias/:nombreCategoria', component: AdminVerticalProductListComponent },
   { path: 'admin/trabajador', component: AdminWorkersPageComponent },
   { path: 'admin/categorias', component: AdminCategoriesPageComponent },
   { path: 'login', component: LoginPageComponent },
