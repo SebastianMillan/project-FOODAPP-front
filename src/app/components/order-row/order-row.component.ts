@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { PedidoShort } from '../../models/client-detail.interface';
 
 @Component({
   selector: 'app-order-row',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrl: './order-row.component.css'
 })
 export class OrderRowComponent {
-
+  @Input() pedidoToShow: PedidoShort | undefined;
 }

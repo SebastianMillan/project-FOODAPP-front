@@ -6,6 +6,7 @@ import { LoginPageComponent } from './ui/login-page/login-page.component';
 import { RegisterPageComponent } from './ui/register-page/register-page.component';
 import { AdminWorkersPageComponent } from './ui/admin-workers-page/admin-workers-page.component';
 import { AdminVerticalProductListComponent } from './components/admin-vertical-product-list/admin-vertical-product-list.component';
+import { AdminClientDetailPageComponent } from './ui/admin-client-detail-page/admin-client-detail-page.component';
 
 const routes: Routes = [
   { path: 'home', component: HomePageComponent },
@@ -13,6 +14,7 @@ const routes: Routes = [
   { path: 'admin/trabajador', component: AdminWorkersPageComponent },
   { path: 'admin/categorias', component: AdminCategoriesPageComponent },
   { path: 'login', component: LoginPageComponent },
+  { path: 'admin/cliente/:id', component: AdminClientDetailPageComponent },
   { path: 'register', component: RegisterPageComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: '**', component: HomePageComponent },
