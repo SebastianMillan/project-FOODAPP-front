@@ -14,7 +14,7 @@ export class FormTrabajadorComponent {
   telefono = '';
   username = '';
   password = '';
-  puesto = '';
+  puesto: any;
   fechaNacimiento = '';
 
   constructor(private trabajadorService: TrabajadorServiceTsService) { }
