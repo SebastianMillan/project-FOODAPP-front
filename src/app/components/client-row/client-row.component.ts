@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { ClientCardResponse } from '../../models/client-card.interface';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-client-row',
@@ -7,4 +9,11 @@ import { Component } from '@angular/core';
 })
 export class ClientRowComponent {
 
+  @Input() clienteToShow: ClientCardResponse | undefined;
+
+  constructor(private router : Router){}
+
+  showClienteDetail() {
+    this.router.navigate(['/admin/cliente', this.clienteToShow?.id]); 
+  }
 }
