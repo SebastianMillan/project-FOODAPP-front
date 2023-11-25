@@ -1,1 +1,24 @@
-<p>form-trabajador works!</p>
+<form (ngSubmit)="altaTrabajador()">
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre" [(ngModel)]="nombre">
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" [(ngModel)]="email">
+
+    <label for="telefono">Teléfono:</label>
+    <input type="tel" id="telefono" name="telefono" [(ngModel)]="telefono">
+
+    <label for="username">Usuario:</label>
+    <input type="text" id="username" name="username" [(ngModel)]="username">
+
+    <label for="password">Contraseña:</label>
+    <input type="password" id="password" name="password" [(ngModel)]="password">
+
+    <label for="puesto">Puesto:</label>
+    <input type="text" id="puesto" name="puesto" [(ngModel)]="puesto">
+
+    <label for="fechaNacimiento">Fecha de Nacimiento:</label>
+    <input type="date" id="fechaNacimiento" name="fechaNacimiento" [(ngModel)]="fechaNacimiento">
+
+    <button type="submit" (click)="altaTrabajador()">Enviar</button>
+</form>

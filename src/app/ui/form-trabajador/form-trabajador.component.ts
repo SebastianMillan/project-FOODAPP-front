@@ -11,7 +11,7 @@ export class FormTrabajadorComponent {
 
   nombre = '';
   email = '';
-  telefobo = '';
+  telefono = '';
   username = '';
   password = '';
   puesto = '';
@@ -19,8 +19,9 @@ export class FormTrabajadorComponent {
 
   constructor(private trabajadorService: TrabajadorServiceTsService) { }
   altaTrabajador() {
-    this.trabajadorService.newTrabajador(this.nombre, this.email, this.telefobo, this.username, this.password, this.puesto, this.fechaNacimiento).subscribe(resp => {
-      window.location.href = 'http://localhost:4200/admin/trabajador'
+    this.trabajadorService.newTrabajador(this.nombre, this.email, this.telefono, this.username, this.password, this.puesto, this.fechaNacimiento).subscribe(resp => {
+      console.log(this.nombre, this.email);
+      window.location.href = 'http://localhost:4200/admin/trabajador';
     })
   }
 }

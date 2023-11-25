@@ -7,10 +7,12 @@ import { RegisterPageComponent } from './ui/register-page/register-page.componen
 import { AdminWorkersPageComponent } from './ui/admin-workers-page/admin-workers-page.component';
 import { AdminVerticalProductListComponent } from './components/admin-vertical-product-list/admin-vertical-product-list.component';
 import { AdminClientDetailPageComponent } from './ui/admin-client-detail-page/admin-client-detail-page.component';
+import { FormTrabajadorComponent } from './ui/form-trabajador/form-trabajador.component';
 
 const routes: Routes = [
   { path: 'home', component: HomePageComponent },
   { path: 'admin/categorias/:nombreCategoria', component: AdminVerticalProductListComponent },
+  { path: 'admin/trabajador/form', component: FormTrabajadorComponent },
   { path: 'admin/trabajador', component: AdminWorkersPageComponent },
   { path: 'admin/categorias', component: AdminCategoriesPageComponent },
   { path: 'login', component: LoginPageComponent },

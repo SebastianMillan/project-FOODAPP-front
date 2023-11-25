@@ -13,7 +13,7 @@ export class TrabajadorServiceTsService {
   constructor(private http: HttpClient) { }
 
   getTrabajadoresList(numPage: number): Observable<TrabajadorResponse> {
-    return this.http.get<TrabajadorResponse>('http://localhost:8080/admin/trabajador/',
+    return this.http.get<TrabajadorResponse>('http://localhost:8080/admin/trabajador',
       {
         headers: {
           'Authorization': `Bearer ${localStorage.getItem('token')}`
@@ -32,6 +32,7 @@ export class TrabajadorServiceTsService {
     }, {
       headers: {
         'Content-Type': 'application/json',
+        'Authorization': `Bearer ${localStorage.getItem('token')}`,
       }
     });
   }
