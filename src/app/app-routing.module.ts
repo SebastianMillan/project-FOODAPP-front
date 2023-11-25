@@ -9,6 +9,7 @@ import { AdminVerticalProductListComponent } from './components/admin-vertical-p
 import { AdminClientDetailPageComponent } from './ui/admin-client-detail-page/admin-client-detail-page.component';
 import { FormTrabajadorComponent } from './ui/form-trabajador/form-trabajador.component';
 import { AdminClientsPageComponent } from './ui/admin-clients-page/admin-clients-page.component';
+import { AdminProductDetailPageComponent } from './ui/admin-product-detail-page/admin-product-detail-page.component';
 
 const routes: Routes = [
   { path: 'home', component: HomePageComponent },
@@ -20,6 +21,7 @@ const routes: Routes = [
   { path: 'admin/cliente', component: AdminClientsPageComponent },
   { path: 'admin/cliente/:id', component: AdminClientDetailPageComponent },
   { path: 'register', component: RegisterPageComponent },
+  { path: 'admin/add/producto', component: AdminProductDetailPageComponent },
   { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: '**', component: HomePageComponent },
 ];
