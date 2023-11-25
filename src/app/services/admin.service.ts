@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { ClientDetailResponse } from '../models/client-detail.interface';
 import { environment } from '../../environment/environment';
+import { ClientCardResponse} from '../models/client-card.interface';
 
 @Injectable({
   providedIn: 'root'
@@ -17,5 +18,13 @@ export class AdminService {
         'Authorization': `Bearer ${localStorage.getItem('token')}`
       }
     });
+  }
+
+  getListClient(): Observable<ClientCardResponse[]>{
+    return this.http.get<ClientCardResponse[]>(`${environment.apiBaseUrl}/admin/client/`, {
+      headers: {
+        'Authorization': `Bearer ${localStorage.getItem('token')}`
+      }
+    })
   }
 }

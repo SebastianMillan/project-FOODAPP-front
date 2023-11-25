@@ -1,1 +1,3 @@
-<p>vertical-client-list works!</p>
+@for (cliente of listClient; track $index) {
+<app-client-row [clienteToShow]="cliente"></app-client-row>
+}
