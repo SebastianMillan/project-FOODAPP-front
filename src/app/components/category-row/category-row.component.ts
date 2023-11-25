@@ -16,6 +16,6 @@ export class CategoryRowComponent {
 
   categoriaProducto(nombreCategoria?: String) {
     console.log(this.categoria?.nombre)
-    this.router.navigate([`/admin/categorias/${nombreCategoria}`]);
+    this.router.navigate([`/admin/categorias/${nombreCategoria?.toLocaleLowerCase()}`]);
   }
 }
