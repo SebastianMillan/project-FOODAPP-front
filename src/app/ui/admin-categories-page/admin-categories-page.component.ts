@@ -31,7 +31,7 @@ export class AdminCategoriesPageComponent implements OnInit {
       .subscribe((categoria: NuevaCategoriaResponse) => {
         alert(`Categoria ${categoria.nombre} añadida correctamente`);
         this.actualizarListaCategorias();
-        this.route.navigate([`/admin/categorias/`]);
+        this.route.navigate([`/admin/categorias`]);
       });
   }
 

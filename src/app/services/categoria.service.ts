@@ -20,9 +20,9 @@ export class CategoriaService {
     });
   }
 
-  addCategoria(nombre: string): Observable<NuevaCategoriaResponse>{
-    return this.http.post<NuevaCategoriaResponse>(`${environment.apiBaseUrl}/admin/add/categoria/`,{
-      nombre: nombre
+  addCategoria(nombreCategoria: string): Observable<NuevaCategoriaResponse>{
+    return this.http.post<NuevaCategoriaResponse>(`${environment.apiBaseUrl}/admin/add/categoria`,{
+      nombre: nombreCategoria
     },{
       headers: {
         'Authorization': `Bearer ${localStorage.getItem('token')}`
