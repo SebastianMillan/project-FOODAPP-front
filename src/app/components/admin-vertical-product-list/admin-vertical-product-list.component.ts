@@ -1,5 +1,5 @@
 import { Component, inject } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-admin-vertical-product-list',
@@ -11,7 +11,11 @@ export class AdminVerticalProductListComponent {
   nombreCategoria!: string;
   route: ActivatedRoute = inject(ActivatedRoute);
 
-  constructor() {
+  constructor(private router: Router) {
     this.nombreCategoria = this.route.snapshot.params['nombreCategoria'];
   }
+
+  addProduct() {
+    this.router.navigate([`admin/add/producto`])
+    }
 }

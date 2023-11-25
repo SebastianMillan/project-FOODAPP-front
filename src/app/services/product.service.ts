@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { ProductCardResponse } from '../models/product-card.interface';
 import { environment } from '../../environment/environment';
+import { ProductAllDetails } from '../models/new-product.interface';
 
 @Injectable({
   providedIn: 'root'
@@ -33,5 +34,20 @@ export class ProductService {
         'Authorization': `Bearer ${localStorage.getItem('token')}`
       }
     })
+  }
+
+  addProduct(nombre: string, descripcion: string, tags: string[] = [], precio: number, categoria: string, imagen: string ): Observable<ProductAllDetails>{
+    return this.http.post<ProductAllDetails>(`${environment.apiBaseUrl}/admin/add/producto`,{
+      nombre: nombre,
+      descripcion: descripcion,
+      tags: tags,
+      precio: precio,
+      categoria: categoria,
+      imagen: imagen,
+   },{    
+      headers: {
+        'Authorization': `Bearer ${localStorage.getItem('token')}`
+      }
+    });
   }
 }
