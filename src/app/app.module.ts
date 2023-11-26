@@ -48,6 +48,7 @@ import { HttpClientModule, provideHttpClient, withFetch } from '@angular/common/
 import { BrowserModule } from '@angular/platform-browser';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
+import { FormTrabajadorComponent } from './ui/form-trabajador/form-trabajador.component';
 
 @NgModule({
   declarations: [
@@ -95,6 +96,7 @@ import { FormsModule } from '@angular/forms';
     AdminWorkersPageComponent,
     DeliveryPageComponent,
     CookPageComponent,
+    FormTrabajadorComponent,
   ],
   imports: [
     BrowserModule,
