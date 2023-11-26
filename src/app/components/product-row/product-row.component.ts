@@ -16,9 +16,7 @@ export class ProductRowComponent {
   constructor(private service: ProductService) { }
 
   deleteProduct(idProducto: string) {
-    this.service.deleteProduct(idProducto).subscribe(
-      () => console.log('borrado')
-    );
+    this.service.deleteProduct(idProducto).subscribe();
 
     console.log(idProducto)
   }
