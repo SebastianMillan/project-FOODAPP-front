@@ -50,4 +50,20 @@ export class ProductService {
       }
     });
   }
+
+  editProduct(nombre: string, descripcion: string, tags: string[] = [], precio: number, categoria: string, imagen: string, id: string): Observable <ProductAllDetails>{
+    return this.http.put<ProductAllDetails>(`${environment.apiBaseUrl}/admin/edit/product/${id}`,{
+      nombre: nombre,
+      descripcion: descripcion,
+      tags: tags,
+      precio: precio,
+      categoria: categoria,
+      imagen: imagen,
+   },{    
+      headers: {
+        'Authorization': `Bearer ${localStorage.getItem('token')}`
+      }
+    });
+  }
+
 }
