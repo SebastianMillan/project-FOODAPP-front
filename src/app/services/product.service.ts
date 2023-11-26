@@ -50,4 +50,13 @@ export class ProductService {
       }
     });
   }
+
+  deleteProduct(id: string){
+    return this.http.delete(`${environment.apiBaseUrl}/admin/delete/producto/${id}`,
+    {
+      headers: {
+        'Authorization': `Bearer ${localStorage.getItem('token')}`
+      }
+    })
+  }
 }
