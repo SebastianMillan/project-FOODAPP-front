@@ -37,6 +37,15 @@ export class TrabajadorServiceTsService {
     });
   }
 
+  deleteTrabajador(id: string): Observable<TrabajadorResponse> {
+    return this.http.delete<TrabajadorResponse>(`http://localhost:8080/admin/delete/trabajador/${id}`,
+      {
+        headers: {
+          'Authorization': `Bearer ${localStorage.getItem('token')}`
+        }
+      });
+  }
+
 }
 
 
