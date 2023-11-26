@@ -82,7 +82,7 @@ export class FormTrabajadorComponent {
       .subscribe(
         (resp) => {
           console.log(this.nombre, this.email);
-          window.location.href = 'http://localhost:4200/admin/trabajador';
+          window.location.href = 'http://localhost:4200/admin/trabajador/form';
         },
         (error) => {
           if (error && error.error && error.error.subErrors) {
@@ -94,11 +94,12 @@ export class FormTrabajadorComponent {
           }
           if (error && error.message && error.message.includes('Unique index or primary key violation')) {
             this.usernameError = 'El nombre de usuario ya está en uso. Por favor, elija otro nombre de usuario.';
+            console.log(error.message);
           } else {
-            this.errorMessage = 'Se produjo un error al crear el trabajador. Por favor, inténtelo de nuevo más tarde.';
+            this.errorMessage = '';
           }
         }
-      )
+      );
   }
 }
 
