@@ -29,8 +29,8 @@ export class AdminService {
     })
   }
 
-  getLoggedUser(): Observable<LoggedUserDetailResponse>{
-    return this.http.get<LoggedUserDetailResponse>(`${environment.apiBaseUrl}/profile`, {
+  getLoggedUser(): Observable<ClientDetailResponse>{
+    return this.http.get<ClientDetailResponse>(`${environment.apiBaseUrl}/profile`, {
       headers: {
         'Authorization': `Bearer ${localStorage.getItem('token')}`
       }

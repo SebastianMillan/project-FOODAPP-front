@@ -1,0 +1,26 @@
+<div class="text-center mx-auto">
+    <form class="border-2 border-white rounded-3 border p-3" method="post">
+        <div class="mb-3">
+            <input type="text" class="form-control" name="nombre" [(ngModel)]="nombre" placeholder="nombre">
+        </div>
+        <div class="mb-3">
+            <input type="email" class="form-control" name="password" [(ngModel)]="email" placeholder="email">
+        </div>
+        <div class="mb-3">
+            <input type="text" class="form-control" name="telefono" [(ngModel)]="telefono" placeholder="telefono">
+        </div>
+        <div class="mb-3">
+            <input type="text" class="form-control" name="avatar" [(ngModel)]="avatar" placeholder="avatar">
+        </div>
+        <div class="mb-3">
+            <input type="text" class="form-control" name="direccion" [(ngModel)]="direccion" placeholder="direccion">
+        </div>
+        <div class="mb-3">
+            <input type="text" class="form-control" name="direccion" [(ngModel)]="codPostal" placeholder="codigo postal">
+        </div>
+        <div class="mb-3">
+            <input type="text" class="form-control" name="direccion" [(ngModel)]="poblacion" placeholder="poblacion">
+        </div>
+        <button (click)="editLoggedUser()" type="submit" class="btn btn-warning mt-3 border-1 border border-black">EDITAR</button>
+    </form>
+</div>
