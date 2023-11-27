@@ -20,7 +20,7 @@ export class ProductService {
     })
   }
 
-  getNewsProducts(): Observable<ProductCardResponse[]>{
+  getNewsProducts(): Observable<ProductCardResponse[]> {
     return this.http.get<ProductCardResponse[]>(`${environment.apiBaseUrl}/product/new_product`, {
       headers: {
         'Authorization': `Bearer ${localStorage.getItem('token')}`
@@ -28,7 +28,7 @@ export class ProductService {
     })
   }
 
-  getOfferProducts(): Observable<ProductCardResponse[]>{
+  getOfferProducts(): Observable<ProductCardResponse[]> {
     return this.http.get<ProductCardResponse[]>(`${environment.apiBaseUrl}/product/offer_product`, {
       headers: {
         'Authorization': `Bearer ${localStorage.getItem('token')}`
@@ -36,18 +36,26 @@ export class ProductService {
     })
   }
 
-  addProduct(nombre: string, descripcion: string, tags: string[] = [], precio: number, categoria: string, imagen: string ): Observable<ProductAllDetails>{
-    return this.http.post<ProductAllDetails>(`${environment.apiBaseUrl}/admin/add/producto`,{
+  addProduct(nombre: string, descripcion: string, tags: string[] = [], precio: number, categoria: string, imagen: string): Observable<ProductAllDetails> {
+    return this.http.post<ProductAllDetails>(`${environment.apiBaseUrl}/admin/add/producto`, {
       nombre: nombre,
       descripcion: descripcion,
       tags: tags,
       precio: precio,
       categoria: categoria,
       imagen: imagen,
-   },{    
+    }, {
       headers: {
         'Authorization': `Bearer ${localStorage.getItem('token')}`
       }
     });
+  }
+
+  productDetails(id: string): Observable<ProductAllDetails> {
+    return this.http.get<ProductAllDetails>(`${environment.apiBaseUrl}/admin/product/details/${id}`, {
+      headers: {
+        'Authorization': `Bearer ${localStorage.getItem('token')}`
+      }
+    })
   }
 }
