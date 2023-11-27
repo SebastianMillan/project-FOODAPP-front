@@ -47,7 +47,4 @@ export class AdminCategoriesPageComponent implements OnInit {
     this.mostrarFormulario = false;
   }
 
-  setNombreCategoria($event: String){
-    this.nombreCategoria = $event;
-  }
 }
