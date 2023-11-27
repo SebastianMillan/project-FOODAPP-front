@@ -1,7 +1,7 @@
 
 import { Component, OnInit } from '@angular/core';
 import { ListOrderAdminResponse } from '../../models/list-order-admin.interface';
-import { OrderService } from '../../service/order.service';
+import { OrderService } from '../../services/order.service';
 
 import { Input } from '@angular/core';
 import { PedidoShort } from '../../models/client-detail.interface';
