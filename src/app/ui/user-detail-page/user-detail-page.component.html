@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="row">
+        <div class="col-4 text-center">
+            <img [src]="loggedUser?.avatar" alt="imagen perfil"
+                class="rounded-circle border-3 border-white border w-100"><br>
+        </div>
+        <div class="col-7">
+            <div class="row">
+                <div class="col-12 mb-4">
+                    <h2 class="fw-bold text-white fs-1">{{loggedUser?.nombre}}</h2><br>
+                    <span class="fst-italic text-white fs-2">{{loggedUser?.email}}</span><br>
+                    <span class="text-white fs-5">{{loggedUser?.poblacion}}</span><br>
+                    <span class="text-white fs-5">{{loggedUser?.direccion}}</span><br>
+                    <span class="text-white fs-5">{{loggedUser?.codPostal}}</span><br>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-1">
+            <button type="button" class="btn border-white text-white rounded-5 p-3" (click)="navigateToEdit()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                    class="bi bi-pen-fill" viewBox="0 0 16 16">
+                    <path
+                        d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001" />
+                </svg>
+            </button>
+
+        </div>
+    </div>
+</div>
