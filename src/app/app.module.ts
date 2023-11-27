@@ -56,6 +56,7 @@ import { UserDetailPageComponent } from './ui/user-detail-page/user-detail-page.
 import { ProductEditPageComponent } from './ui/product-edit-page/product-edit-page.component';
 
 import { UserEditPageComponent } from './ui/user-edit-page/user-edit-page.component';
+import { FormEditTrabajadorComponent } from './ui/form-edit-trabajador/form-edit-trabajador.component';
 
 
 @NgModule({
@@ -109,7 +110,8 @@ import { UserEditPageComponent } from './ui/user-edit-page/user-edit-page.compon
     UserDetailPageComponent,
     ProductEditPageComponent,
     UserEditPageComponent,
-    UserEditPageComponent
+    UserEditPageComponent,
+    FormEditTrabajadorComponent
 
   ],
   imports: [
