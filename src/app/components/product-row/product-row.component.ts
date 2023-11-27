@@ -1,6 +1,8 @@
 import { Component, Input, OnInit, inject } from '@angular/core';
 import { ProductRowResponse } from '../../models/product-row.interface';
+import { ProductService } from '../../services/product.service';
 import { ActivatedRoute, Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-product-row',
@@ -10,6 +12,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class ProductRowComponent {
 
   @Input() product!: ProductRowResponse;
+
 
   id!: string;
   nombreCategoria!: string;
@@ -23,10 +26,17 @@ export class ProductRowComponent {
   categoria!: string;
   descuento!: number;
 
-
-  constructor(private router: Router) {
+  constructor(private router: Router, private service: ProductService) {
     this.nombreCategoria = this.route.snapshot.params['nombreCategoria'];
   }
+
+  deleteProduct(idProducto: string) {
+    this.service.deleteProduct(idProducto).subscribe();
+    window.location.href = `http://localhost:4200/admin/categorias/${this.nombreCategoria.toLocaleLowerCase()}`
+    console.log(this.nombreCategoria)
+    console.log(idProducto)
+  }
+
 
   editar(id: string) {
     this.router.navigate([`admin/edit/producto/${id}`])

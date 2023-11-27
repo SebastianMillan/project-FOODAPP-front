@@ -51,6 +51,26 @@ export class ProductService {
     });
   }
 
+  deleteProduct(id: string) {
+    return this.http.delete(`${environment.apiBaseUrl}/admin/delete/producto/${id}`,
+      {
+        headers: {
+          'Authorization': `Bearer ${localStorage.getItem('token')}`
+        }
+      });
+  }
+
+
+  productDetails(id: string): Observable<ProductAllDetails> {
+    return this.http.get<ProductAllDetails>(`${environment.apiBaseUrl}/admin/product/details/${id}`, {
+
+      headers: {
+        'Authorization': `Bearer ${localStorage.getItem('token')}`
+      }
+    })
+  }
+
+
   editProduct(nombre: string, descripcion: string, tags: string[] = [], precio: number, categoria: string, imagen: string, id: string): Observable<ProductAllDetails> {
     return this.http.put<ProductAllDetails>(`${environment.apiBaseUrl}/admin/edit/product/${id}`, {
       nombre: nombre,
@@ -64,15 +84,6 @@ export class ProductService {
         'Authorization': `Bearer ${localStorage.getItem('token')}`
       }
     });
-  }
-
-
-  productDetails(id: string): Observable<ProductAllDetails> {
-    return this.http.get<ProductAllDetails>(`${environment.apiBaseUrl}/admin/product/details/${id}`, {
-      headers: {
-        'Authorization': `Bearer ${localStorage.getItem('token')}`
-      }
-    })
   }
 
 }
