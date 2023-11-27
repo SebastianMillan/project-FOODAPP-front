@@ -31,14 +31,8 @@ export class AdminProductDetailPageComponent {
       });
   }
 
-  editProduct(){
-    const tagsArray: string[] = this.tags.split(',');
-    const precioConDescuento = +(this.precio * (1 - this.descuento / 100)).toFixed(2);
-    this.service.editProduct(this.nombre, this.descripcion, tagsArray, precioConDescuento, this.categoria.toLowerCase(), this.url, this.id)
-    .subscribe((producto: ProductAllDetails) => {
-      console.log('Producto editado:', producto);
-      this.route.navigate([`/admin/categorias/${this.categoria.toLocaleLowerCase()}`]);
-    });
+  editProduct() {
+
   }
 
 }
