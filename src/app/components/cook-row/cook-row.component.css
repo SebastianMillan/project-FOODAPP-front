@@ -1,0 +1,12 @@
+.lineas-pedido{
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: .3s grid-template-rows ease-in-out;
+   
+}
+.lineas-pedido > div{
+overflow: hidden;
+}
+.container:hover .lineas-pedido{
+    grid-template-rows: 1fr;
+}

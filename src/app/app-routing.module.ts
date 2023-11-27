@@ -13,6 +13,7 @@ import { AdminProductDetailPageComponent } from './ui/admin-product-detail-page/
 import { UserDetailPageComponent } from './ui/user-detail-page/user-detail-page.component';
 import { ProductEditPageComponent } from './ui/product-edit-page/product-edit-page.component';
 import { UserEditPageComponent } from './ui/user-edit-page/user-edit-page.component';
+import { CookPageComponent } from './ui/cook-page/cook-page.component';
 import { FormEditTrabajadorComponent } from './ui/form-edit-trabajador/form-edit-trabajador.component';
 
 const routes: Routes = [
@@ -21,6 +22,7 @@ const routes: Routes = [
   { path: 'admin/trabajador/form', component: FormTrabajadorComponent },
   { path: 'admin/trabajador/edit/form/:id', component: FormEditTrabajadorComponent },
   { path: 'admin/trabajador', component: AdminWorkersPageComponent },
+  { path: 'cocinero/pedidos', component: CookPageComponent },
   { path: 'admin/categorias', component: AdminCategoriesPageComponent },
   { path: 'login', component: LoginPageComponent },
   { path: 'profile', component: UserDetailPageComponent },
