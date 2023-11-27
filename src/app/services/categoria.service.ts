@@ -30,4 +30,11 @@ export class CategoriaService {
     });
   }
 
+  deleteCategoria(nombreCategoria: String): Observable<any> {
+    return this.http.delete<any>(`${environment.apiBaseUrl}/admin/delete/categoria/${nombreCategoria}`, {
+      headers: {
+        'Authorization': `Bearer ${localStorage.getItem('token')}`
+      }
+    });
+  }
 }
