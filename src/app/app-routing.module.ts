@@ -13,6 +13,7 @@ import { AdminProductDetailPageComponent } from './ui/admin-product-detail-page/
 import { UserDetailPageComponent } from './ui/user-detail-page/user-detail-page.component';
 import { ProductEditPageComponent } from './ui/product-edit-page/product-edit-page.component';
 import { UserEditPageComponent } from './ui/user-edit-page/user-edit-page.component';
+import { MenuPageComponent } from './ui/menu-page/menu-page.component';
 
 const routes: Routes = [
   { path: 'home', component: HomePageComponent },
@@ -28,6 +29,7 @@ const routes: Routes = [
   { path: 'register', component: RegisterPageComponent },
   { path: 'admin/add/producto', component: AdminProductDetailPageComponent },
   { path: 'admin/edit/producto/:id', component: ProductEditPageComponent },
+  { path: 'menu', component: MenuPageComponent},
   { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: '**', component: HomePageComponent },
 ];

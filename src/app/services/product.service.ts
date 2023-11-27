@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { ProductCardResponse } from '../models/product-card.interface';
 import { environment } from '../../environment/environment';
 import { ProductAllDetails } from '../models/new-product.interface';
+import { MenuResponse } from '../models/menu.interface';
 
 @Injectable({
   providedIn: 'root'
@@ -80,6 +81,15 @@ export class ProductService {
       categoria: categoria,
       imagen: imagen,
     }, {
+      headers: {
+        'Authorization': `Bearer ${localStorage.getItem('token')}`
+      }
+    });
+  }
+
+  getProductGruopByCategory(): Observable<MenuResponse[]>{
+    return this.http.get<MenuResponse[]>(`${environment.apiBaseUrl}/admin/menu`,
+    {
       headers: {
         'Authorization': `Bearer ${localStorage.getItem('token')}`
       }
