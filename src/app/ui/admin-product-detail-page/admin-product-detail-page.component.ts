@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ProductService } from '../../services/product.service';
 import { ProductAllDetails } from '../../models/new-product.interface';
 import { Router } from '@angular/router';
@@ -17,6 +17,8 @@ export class AdminProductDetailPageComponent {
   precio!: number;
   categoria!: string;
   descuento!: number;
+  id!: string;
+
 
   constructor(private service: ProductService, private route: Router) { }
 

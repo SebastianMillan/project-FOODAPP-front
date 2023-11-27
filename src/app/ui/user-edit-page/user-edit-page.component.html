@@ -1,0 +1,43 @@
+<div class="mx-auto w-50">
+    <form class="border-2 border-white rounded-3 border p-3" method="post">
+        <div class="row">
+            <div class="mb-3 col-6">
+                <span class="text-white">Nombre</span>
+                <input type="text" class="form-control" name="nombre" [(ngModel)]="nombre" placeholder="nombre">
+            </div>
+            <div class="mb-3 col-6">
+                <span class="text-white">Email</span>
+                <input type="email" class="form-control" name="password" [(ngModel)]="email" placeholder="email">
+            </div>
+        </div>
+        <div class="row">
+            <div class="mb-3 col-3">
+                <span class="text-white">Telefono</span>
+                <input type="text" class="form-control" name="telefono" [(ngModel)]="telefono" placeholder="telefono">
+            </div>
+            <div class="mb-3 col-9">
+                <span class="text-white">URL Avatar</span>
+                <input type="text" class="form-control" name="avatar" [(ngModel)]="avatar" placeholder="avatar">
+            </div>
+        </div>
+        <div class="mb-3">
+            <span class="text-white">Dirección</span>
+            <input type="text" class="form-control" name="direccion" [(ngModel)]="direccion" placeholder="direccion">
+        </div>
+        <div class="row">
+            <div class="mb-3 col-6">
+                <span class="text-white">Codigo Postal</span>
+                <input type="text" class="form-control" name="direccion" [(ngModel)]="codPostal"
+                    placeholder="codigo postal">
+            </div>
+            <div class="mb-3 col-6">
+                <span class="text-white">Dirección</span>
+                <input type="text" class="form-control" name="direccion" [(ngModel)]="poblacion"
+                    placeholder="poblacion">
+            </div>
+        </div>
+
+        <button (click)="editLoggedUser()" type="submit"
+            class="btn btn-warning mt-3 border-1 border border-black">EDITAR</button>
+    </form>
+</div>
