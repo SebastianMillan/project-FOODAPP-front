@@ -30,9 +30,9 @@ export class CategoriaService {
     });
   }
 
-  editCategoria(nombreCategoria: String): Observable<NuevaCategoriaResponse>{
-    return this.http.put<NuevaCategoriaResponse>(`${environment.apiBaseUrl}/admin/edit/categoria/${nombreCategoria}`, {
-      nombre: nombreCategoria
+  editCategoria(nombre: String): Observable<NuevaCategoriaResponse>{
+    return this.http.put<NuevaCategoriaResponse>(`${environment.apiBaseUrl}/admin/edit/categoria/${nombre}`, {
+      nombre: nombre
     },{
       headers: {
         'Authorization': `Bearer ${localStorage.getItem('token')}`

@@ -7,17 +7,11 @@ import { CategoriaRowResponse } from '../../models/categoria-row.interface';
   templateUrl: './vertical-category-list.component.html',
   styleUrl: './vertical-category-list.component.css'
 })
-export class VerticalCategoryListComponent implements OnInit{
+export class VerticalCategoryListComponent{
 
   @Input() listCategoria: CategoriaRowResponse [] = [];
 
-  constructor(private categoriaService: CategoriaService) { }
-
-  ngOnInit(): void {
-    this.categoriaService.getCategorias().subscribe(resp => {
-      this.listCategoria = resp;
-    });
-  }
+  constructor(private categoriaService: CategoriaService) { }  
 
   actualizarListaCategorias() {
     this.categoriaService.getCategorias().subscribe(resp => {

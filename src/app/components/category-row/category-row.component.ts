@@ -30,12 +30,12 @@ export class CategoryRowComponent {
     }
   }
 
-  editCategoria(): void {
-    this.categoriaService.editCategoria(this.categoria?.nombre).subscribe(resp => {
-    this.categoria.nombre = this.editNombreCat;
-    // this.categoriaEditada.emit(this.categoria.nombre);
-    alert("La categoría se ha editado correctamente");
-    this.router.navigate(['/admin/categorias']);  
+  editCategoria() {
+    this.categoriaService.editCategoria(this.categoria.nombre).subscribe(resp=>{
+      this.categoria.nombre = this.editNombreCat;
+      this.categoriaEditada.emit(this.editNombreCat);
+      this.router.navigate(['/admin/categorias']);
     });
   }
+
 }
