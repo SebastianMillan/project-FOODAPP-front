@@ -11,6 +11,7 @@ import { FormTrabajadorComponent } from './ui/form-trabajador/form-trabajador.co
 import { AdminClientsPageComponent } from './ui/admin-clients-page/admin-clients-page.component';
 import { AdminProductDetailPageComponent } from './ui/admin-product-detail-page/admin-product-detail-page.component';
 import { UserDetailPageComponent } from './ui/user-detail-page/user-detail-page.component';
+import { ProductEditPageComponent } from './ui/product-edit-page/product-edit-page.component';
 import { UserEditPageComponent } from './ui/user-edit-page/user-edit-page.component';
 
 const routes: Routes = [
@@ -26,6 +27,7 @@ const routes: Routes = [
   { path: 'admin/cliente/:id', component: AdminClientDetailPageComponent },
   { path: 'register', component: RegisterPageComponent },
   { path: 'admin/add/producto', component: AdminProductDetailPageComponent },
+  { path: 'admin/edit/producto/:id', component: ProductEditPageComponent },
   { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: '**', component: HomePageComponent },
 ];
