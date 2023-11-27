@@ -66,4 +66,13 @@ export class ProductService {
     });
   }
 
+
+  productDetails(id: string): Observable<ProductAllDetails> {
+    return this.http.get<ProductAllDetails>(`${environment.apiBaseUrl}/admin/product/details/${id}`, {
+      headers: {
+        'Authorization': `Bearer ${localStorage.getItem('token')}`
+      }
+    })
+  }
+
 }
