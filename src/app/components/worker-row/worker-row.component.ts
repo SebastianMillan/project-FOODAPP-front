@@ -1,5 +1,4 @@
 import { Component, Input } from '@angular/core';
-import { Trabajador, TrabajadorResponse } from '../../models/Get-trabajador-list.interface';
 
 @Component({
   selector: 'app-worker-row',
@@ -8,6 +7,6 @@ import { Trabajador, TrabajadorResponse } from '../../models/Get-trabajador-list
 })
 export class WorkerRowComponent {
 
-  @Input() trabajador !: Trabajador;
+
 
 }

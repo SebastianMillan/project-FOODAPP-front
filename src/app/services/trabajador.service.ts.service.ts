@@ -13,7 +13,7 @@ export class TrabajadorServiceTsService {
   constructor(private http: HttpClient) { }
 
   getTrabajadoresList(numPage: number): Observable<TrabajadorResponse> {
-    return this.http.get<TrabajadorResponse>('http://localhost:8080/admin/trabajador',
+    return this.http.get<TrabajadorResponse>(`${environment.apiBaseUrl}/admin/trabajador`,
       {
         headers: {
           'Authorization': `Bearer ${localStorage.getItem('token')}`
@@ -35,6 +35,15 @@ export class TrabajadorServiceTsService {
         'Authorization': `Bearer ${localStorage.getItem('token')}`,
       }
     });
+  }
+
+  deleteTrabajador(id: string): Observable<TrabajadorResponse> {
+    return this.http.delete<TrabajadorResponse>(`${environment.apiBaseUrl}/admin/delete/trabajador/${id}`,
+      {
+        headers: {
+          'Authorization': `Bearer ${localStorage.getItem('token')}`
+        }
+      });
   }
 
 }
