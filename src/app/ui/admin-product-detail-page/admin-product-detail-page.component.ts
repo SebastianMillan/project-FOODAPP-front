@@ -19,8 +19,6 @@ export class AdminProductDetailPageComponent {
   descuento!: number;
   id!: string;
 
-  product!: ProductAllDetails;
-
   constructor(private service: ProductService, private route: Router) { }
 
   addProducto() {
@@ -31,14 +29,6 @@ export class AdminProductDetailPageComponent {
         console.log('Producto añadido:', producto);
         this.route.navigate([`/admin/categorias/${this.categoria.toLocaleLowerCase()}`]);
       });
-  }
-
-  editProduct() {
-    this.service.productDetails(this.id).subscribe(resp => {
-      this.product = resp;
-
-      this.route.navigate([]);
-    })
   }
 
 }
