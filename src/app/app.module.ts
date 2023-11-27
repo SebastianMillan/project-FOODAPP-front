@@ -52,6 +52,8 @@ import { FormTrabajadorComponent } from './ui/form-trabajador/form-trabajador.co
 import { UserDetailPageComponent } from './ui/user-detail-page/user-detail-page.component';
 import { ProductEditPageComponent } from './ui/product-edit-page/product-edit-page.component';
 
+import { UserEditPageComponent } from './ui/user-edit-page/user-edit-page.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -101,6 +103,8 @@ import { ProductEditPageComponent } from './ui/product-edit-page/product-edit-pa
     FormTrabajadorComponent,
     UserDetailPageComponent,
     ProductEditPageComponent,
+    UserEditPageComponent,
+
   ],
   imports: [
     BrowserModule,
