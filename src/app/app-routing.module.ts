@@ -10,6 +10,7 @@ import { AdminClientDetailPageComponent } from './ui/admin-client-detail-page/ad
 import { FormTrabajadorComponent } from './ui/form-trabajador/form-trabajador.component';
 import { AdminClientsPageComponent } from './ui/admin-clients-page/admin-clients-page.component';
 import { AdminProductDetailPageComponent } from './ui/admin-product-detail-page/admin-product-detail-page.component';
+import { UserDetailPageComponent } from './ui/user-detail-page/user-detail-page.component';
 
 const routes: Routes = [
   { path: 'home', component: HomePageComponent },
@@ -18,6 +19,7 @@ const routes: Routes = [
   { path: 'admin/trabajador', component: AdminWorkersPageComponent },
   { path: 'admin/categorias', component: AdminCategoriesPageComponent },
   { path: 'login', component: LoginPageComponent },
+  { path: 'profile', component: UserDetailPageComponent },
   { path: 'admin/cliente', component: AdminClientsPageComponent },
   { path: 'admin/cliente/:id', component: AdminClientDetailPageComponent },
   { path: 'register', component: RegisterPageComponent },
