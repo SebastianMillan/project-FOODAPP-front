@@ -49,7 +49,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
 import { FormTrabajadorComponent } from './ui/form-trabajador/form-trabajador.component';
+
 import { BotonDeteleTrabajadorComponent } from './components/boton-detele-trabajador/boton-detele-trabajador.component';
+
+import { UserDetailPageComponent } from './ui/user-detail-page/user-detail-page.component';
+
 
 @NgModule({
   declarations: [
@@ -98,7 +102,11 @@ import { BotonDeteleTrabajadorComponent } from './components/boton-detele-trabaj
     DeliveryPageComponent,
     CookPageComponent,
     FormTrabajadorComponent,
+
     BotonDeteleTrabajadorComponent,
+
+    UserDetailPageComponent,
+
   ],
   imports: [
     BrowserModule,

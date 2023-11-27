@@ -14,7 +14,7 @@ export class BotonDeteleTrabajadorComponent {
 
   eliminarTrabajador() {
     this.trabajadorService.deleteTrabajador(this.id).subscribe(resp => {
-      window.location.href = 'http://localhost:4200/admin/trabajador/form';
+      window.location.href = 'http:/localhost:4200/admin/trabajador/form';
       console.log(this.id);
     })
   }
