@@ -40,9 +40,9 @@ export class ProductEditPageComponent implements OnInit {
   editar() {
 
     this.service.editProduct(this.nombre, this.descripcion, this.tags, this.precio, this.categoria, this.url, this.id).subscribe(resp => {
-
+      this.router.navigate([`/admin/categorias/${this.categoria.toLocaleLowerCase()}`])
     })
-    this.router.navigate([`/admin/categorias/${this.categoria.toLocaleLowerCase()}`])
+
   }
 
 }
