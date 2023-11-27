@@ -53,6 +53,7 @@ import { FormTrabajadorComponent } from './ui/form-trabajador/form-trabajador.co
 import { BotonDeteleTrabajadorComponent } from './components/boton-detele-trabajador/boton-detele-trabajador.component';
 
 import { UserDetailPageComponent } from './ui/user-detail-page/user-detail-page.component';
+import { UserEditPageComponent } from './ui/user-edit-page/user-edit-page.component';
 
 
 @NgModule({
@@ -106,6 +107,10 @@ import { UserDetailPageComponent } from './ui/user-detail-page/user-detail-page.
     BotonDeteleTrabajadorComponent,
 
     UserDetailPageComponent,
+
+
+
+
 
   ],
   imports: [
