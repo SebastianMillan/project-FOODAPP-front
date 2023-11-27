@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-worker-row',
@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrl: './worker-row.component.css'
 })
 export class WorkerRowComponent {
+
+
 
 }

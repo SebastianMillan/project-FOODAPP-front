@@ -1,3 +1,4 @@
+
 <div class="container">
     <table class="table-dark">
         <thead>
@@ -11,3 +12,8 @@
           <app-order-row *ngFor="let o of orderList" [order]="o"></app-order-row>
     </table>
 </div>
+=======
+@for (pedido of listPedido; track $index) {
+<app-order-row [pedidoToShow]="pedido"></app-order-row>
+}
+

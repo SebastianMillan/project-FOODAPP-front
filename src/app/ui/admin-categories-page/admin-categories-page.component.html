@@ -1,1 +1,30 @@
-<p>admin-categories-page works!</p>
+<div class="container">
+  <div class="fondo">
+    <div class="BotonesDeArriba p-2 mt-3">
+      <div class="col-md-6">
+        <button type="button" class="btn btn-light text-dark border border-dark border-3 fw-bold btnAlta"
+          style="border-radius: 30px;" (click)="mostrarFormulario = true">ALTA</button>
+      </div>
+    </div>
+
+    <div *ngIf="mostrarFormulario" class="row mt-3">
+      <div class="col-md-6">
+        <form (ngSubmit)="guardarCategoria()">
+          <div class="text-light mb-3 ms-3 has-validation input-group">
+            <input type="text" class="form-control" id="nombreCategoria" name="nombreCategoria" [(ngModel)]="nombreCategoria"
+              placeholder="Ingrese el nombre de la nueva categoría" required>
+              <div class="invalid-tooltip">
+                El nombre de la categoría es obligatorio.
+            </div>
+          </div>
+          <div class="d-flex justify-content-end">
+            <button type="submit" class="btn btn-warning me-2" [disabled]="!nombreCategoria">Guardar</button>
+            <button type="button" class="btn btn-secondary" (click)="cancelar()">Cancelar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <app-vertical-category-list [listCategoria]="categorias"></app-vertical-category-list>
+  </div>
+</div>

@@ -1,9 +1,6 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { HorizontalProductListComponent } from './components/horizontal-product-list/horizontal-product-list.component';
 import { VerticalCategoryWithProductListComponent } from './components/vertical-category-with-product-list/vertical-category-with-product-list.component';
@@ -48,13 +45,22 @@ import { AdminClientDetailPageComponent } from './ui/admin-client-detail-page/ad
 import { AdminWorkersPageComponent } from './ui/admin-workers-page/admin-workers-page.component';
 import { DeliveryPageComponent } from './ui/delivery-page/delivery-page.component';
 import { CookPageComponent } from './ui/cook-page/cook-page.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, provideHttpClient, withFetch } from '@angular/common/http';
+import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { FormsModule } from '@angular/forms';
+import { FormTrabajadorComponent } from './ui/form-trabajador/form-trabajador.component';
+import { BotonDeteleTrabajadorComponent } from './components/boton-detele-trabajador/boton-detele-trabajador.component';
+import { UserDetailPageComponent } from './ui/user-detail-page/user-detail-page.component';
+import { ProductEditPageComponent } from './ui/product-edit-page/product-edit-page.component';
+import { UserEditPageComponent } from './ui/user-edit-page/user-edit-page.component';
+import { FormEditTrabajadorComponent } from './ui/form-edit-trabajador/form-edit-trabajador.component';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent,
     RegisterComponent,
     HorizontalProductListComponent,
     VerticalCategoryWithProductListComponent,
@@ -98,17 +104,27 @@ import { HttpClientModule } from '@angular/common/http';
     AdminClientDetailPageComponent,
     AdminWorkersPageComponent,
     DeliveryPageComponent,
-    CookPageComponent
+    CookPageComponent,
+    FormTrabajadorComponent,
+    BotonDeteleTrabajadorComponent,
+    UserDetailPageComponent,
+    ProductEditPageComponent,
+    UserEditPageComponent,
+    UserEditPageComponent,
+    FormEditTrabajadorComponent
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-
+    NgbModule,
+    HttpClientModule,
+    FormsModule
   ],
-  providers: [
-    provideClientHydration()
-  ],
-  bootstrap: [AppComponent]
+  providers: 
+    [provideHttpClient(withFetch())],
+    bootstrap: [AppComponent]
+ 
 })
 export class AppModule { }

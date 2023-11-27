@@ -1,0 +1,73 @@
+<form class="form" (ngSubmit)="altaTrabajador()">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="nombre" class="text-white">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" class="form-control" [(ngModel)]="nombre">
+                <span class="error" *ngIf="nombreError">{{nombreError}}</span>
+            </div>
+            <div class="form-group">
+                <label for="email" class="text-white">Email:</label>
+                <input type="email" id="email" name="email" class="form-control" [(ngModel)]="email">
+                <div *ngIf="emailError" class="error-message">{{emailError}}</div>
+
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="telefono" class="text-white">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono" class="form-control" [(ngModel)]="telefono">
+            </div>
+            <div class="form-group">
+                <label for="username" class="text-white">Usuario:</label>
+                <input type="text" id="username" name="username" class="form-control" [(ngModel)]="username">
+                <span *ngIf="usernameError" class="usernameError">{{usernameError}}</span>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="password" class="text-white">Contraseña:</label>
+                <input type="password" id="password" name="password" class="form-control" [(ngModel)]="password">
+                <span class="error" *ngIf="passwordError">{{passwordError}}</span>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="confirmPassword" class="text-white">Confirmar Contraseña:</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" class="form-control"
+                    [(ngModel)]="confirmPassword">
+                <span class="error" *ngIf="confirmPasswordError">{{confirmPasswordError}}</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="puesto" class="text-white">Puesto:</label>
+                <select id="puesto" name="puesto" class="form-control" [(ngModel)]="puesto">
+                    <option value="COCINERO">COCINERO</option>
+                    <option value="REPARTIDOR">REPARTIDOR</option>
+                </select>
+                <span class="error" *ngIf="puestoError">{{puestoError}}</span>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="fechaNacimiento" class="text-white">Fecha de Nacimiento:</label>
+                <input type="date" id="fechaNacimiento" name="fechaNacimiento" class="form-control"
+                    [(ngModel)]="fechaNacimiento">
+                <span class="error" *ngIf="fechaError">{{fechaError}}</span>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="errorMessage" class="error-message">{{errorMessage}}</div>
+    <button type="submit" class="btn btn-primary" (click)="altaTrabajador()">Enviar</button>
+</form>

@@ -1,1 +1,12 @@
-<p>admin-vertical-product-list works!</p>
+<div class="container">
+  <div class="d-flex justify-content-between">
+    <button class="btn btn-light" (click)="addProduct()">ADD</button>
+    <form class="d-flex" role="search">
+      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+    </form>
+  </div>
+
+  <div class="pt-5">
+    <app-vertical-category-with-product-list></app-vertical-category-with-product-list>
+  </div>
+</div>

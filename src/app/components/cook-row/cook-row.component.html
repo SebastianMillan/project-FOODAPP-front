@@ -1,1 +1,25 @@
-<p>cook-row works!</p>
+<div class="container mt-3">
+    <div class="border border-white border-2 rounded-2">
+        <div class="row  py-4 rounded-2">
+            <div class="col-8 text-center mt-2">
+                <span class="text-white fs-4">{{orderToShow.fecha}}</span>
+            </div>
+            <div class="col-4 text-center mt-2">
+                <span [class]="classEstadoPedido">{{formatEstadoPedidoName()}}</span>
+            </div>
+        </div>
+        <div *ngIf="comprobarEstadoPedido()">
+            <div class="lineas-pedido">
+                <div class=" ms-5">
+                    @for (ln of orderToShow.lineasPedido; track $index) {
+                    <input class="form-check-input" type="checkbox">
+                    <span class="text-white fs-5"> {{ln.producto}} X {{ln.cantidad}}</span>
+                    }
+                    <br><button type="button" class="btn btn-warning m-3" (click)="changeToEnReparto()">FINALIZAR PEDIDO</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
