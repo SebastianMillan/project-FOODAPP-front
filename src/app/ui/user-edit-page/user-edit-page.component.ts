@@ -8,8 +8,8 @@ import { AdminService } from '../../services/admin.service';
   templateUrl: './user-edit-page.component.html',
   styleUrl: './user-edit-page.component.css'
 })
-export class UserEditPageComponent implements OnInit{
-  
+export class UserEditPageComponent implements OnInit {
+
   nombre = '';
   email = '';
   telefono = '';
@@ -18,8 +18,8 @@ export class UserEditPageComponent implements OnInit{
   codPostal = '';
   poblacion = '';
 
-  constructor(private clientService: ClientService, private router: Router, private adminService: AdminService){}
-  
+  constructor(private clientService: ClientService, private router: Router, private adminService: AdminService) { }
+
   ngOnInit(): void {
     this.adminService.getLoggedUser().subscribe(resp => {
       this.nombre = resp.nombre;
@@ -39,7 +39,7 @@ export class UserEditPageComponent implements OnInit{
       avatar: this.avatar,
       direccion: this.direccion,
       codPostal: this.codPostal,
-      poblacion:this.poblacion
+      poblacion: this.poblacion
     }
     this.clientService.editLoggedUser(clientEditado).subscribe(resp => {
       this.router.navigateByUrl('/login');
