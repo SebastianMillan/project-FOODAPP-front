@@ -107,6 +107,7 @@ import { UserEditPageComponent } from './ui/user-edit-page/user-edit-page.compon
     BotonDeteleTrabajadorComponent,
 
     UserDetailPageComponent,
+    UserEditPageComponent
 
 
 
