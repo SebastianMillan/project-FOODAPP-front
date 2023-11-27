@@ -50,6 +50,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
 import { FormTrabajadorComponent } from './ui/form-trabajador/form-trabajador.component';
 import { UserDetailPageComponent } from './ui/user-detail-page/user-detail-page.component';
+import { UserEditPageComponent } from './ui/user-edit-page/user-edit-page.component';
 
 @NgModule({
   declarations: [
@@ -99,6 +100,7 @@ import { UserDetailPageComponent } from './ui/user-detail-page/user-detail-page.
     CookPageComponent,
     FormTrabajadorComponent,
     UserDetailPageComponent,
+    UserEditPageComponent,
   ],
   imports: [
     BrowserModule,
