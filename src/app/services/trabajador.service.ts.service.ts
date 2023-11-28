@@ -4,6 +4,7 @@ import { Observable } from "rxjs";
 import { TrabajadorResponse } from "../models/Get-trabajador-list.interface";
 import { NewTrabajadorResponse } from "../models/Add-Trabajador.interface";
 import { environment } from "../../environment/environment";
+import { Trabajador } from "../models/Get-trabajador.interface";
 
 @Injectable({
   providedIn: 'root'
@@ -45,6 +46,29 @@ export class TrabajadorServiceTsService {
         }
       });
   }
+
+  editTrabajador(nombre: string, email: string, telefono: string, puesto: string, fechaNacimiento: string, id: string): Observable<Trabajador> {
+    return this.http.put<Trabajador>(`${environment.apiBaseUrl}/admin/trabajador/${id}`, {
+      nombre: nombre,
+      email: email,
+      telefono: telefono,
+      puesto: puesto,
+      fechaNacimiento: fechaNacimiento,
+    }, {
+      headers: {
+        'Authorization': `Bearer ${localStorage.getItem('token')}`
+      }
+    });
+  }
+
+  getTrabajador(id: string): Observable<Trabajador> {
+    return this.http.get<Trabajador>(`${environment.apiBaseUrl}/admin/trabajador/${id}`, {
+      headers: {
+        'Authorization': `Bearer ${localStorage.getItem('token')}`
+      }
+    })
+  }
+
 
 }
 

@@ -1,1 +1,15 @@
-<p>cook-page works!</p>
+<div class="container">
+    <div class="row">
+        <div class="col-8 text-center">
+            <h3 class="text-white text-center">Fecha</h3>
+        </div>
+        <div class="col-4 text-center">
+            <h3 class="text-white text-center">Estado Pedido</h3>
+        </div>
+
+    </div>
+</div>
+<app-vertical-cook-list [listOrders]="orderList"></app-vertical-cook-list>
+<ngb-pagination [collectionSize]="totalOrders" [pageSize]="numOrdersByPage" [maxSize]="cantPageShow" [(page)]="page"
+    aria-label="Default pagination"
+    class="d-flex justify-content-center mt-5" (pageChange)="loadPage()"></ngb-pagination>
