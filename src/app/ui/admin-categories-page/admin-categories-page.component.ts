@@ -11,10 +11,6 @@ import { Router } from '@angular/router';
 })
 export class AdminCategoriesPageComponent implements OnInit {
 
-<<<<<<< HEAD
-=======
-  @Input() 
->>>>>>> HU16-CategoriaEditFront
   categorias: CategoriaRowResponse[] = [];
   mostrarFormulario: boolean = false;
   nombreCategoria: String = '';
@@ -49,11 +45,9 @@ export class AdminCategoriesPageComponent implements OnInit {
   cancelar() {
     this.mostrarFormulario = false;
   }
-
-<<<<<<< HEAD
+  
   setNombreCategoria($event: String){
     this.nombreCategoria = $event;
   }
-=======
->>>>>>> HU16-CategoriaEditFront
+
 }
