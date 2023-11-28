@@ -30,14 +30,15 @@ export class CategoriaService {
     });
   }
 
-  editCategoria(nombre: String): Observable<NuevaCategoriaResponse>{
-    return this.http.put<NuevaCategoriaResponse>(`${environment.apiBaseUrl}/admin/edit/categoria/${nombre}`, {
-      nombre: nombre
+  editCategoria(idCategoria: String, nuevoNombre: String): Observable<NuevaCategoriaResponse>{
+    return this.http.put<NuevaCategoriaResponse>(`${environment.apiBaseUrl}/admin/edit/categoria/${idCategoria}`, {
+      nombre: nuevoNombre
     },{
       headers: {
+        'Content-Type': 'application/json',
         'Authorization': `Bearer ${localStorage.getItem('token')}`
       }
-    })
+    });
   }
 
 }

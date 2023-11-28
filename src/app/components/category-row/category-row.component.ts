@@ -31,11 +31,9 @@ export class CategoryRowComponent {
   }
 
   editCategoria() {
-    this.categoriaService.editCategoria(this.categoria.nombre).subscribe(resp=>{
-      this.categoria.nombre = this.editNombreCat;
+    this.categoriaService.editCategoria(this.categoria.id, this.editNombreCat).subscribe(resp =>{
       this.categoriaEditada.emit(this.editNombreCat);
-      this.router.navigate(['/admin/categorias']);
-    });
+    })
   }
 
 }
