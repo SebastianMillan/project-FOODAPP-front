@@ -10,12 +10,6 @@
             <a [routerLink]="['/carta']" class="nav-link">CARTA</a>
             <a [routerLink]="['/pedido']" class="nav-link">PEDIDOS</a>
         </div>
-        <div class="nav-item">
-
-            <a class=" btn " aria-current="page" [routerLinkActive]="['active']">
-                <p>{{usuarioLogueado.nombre}}</p>
-            </a>
-        </div>
         <app-modal [usuarioLogueado]="usuarioLogueado"></app-modal>
     </div>
 </nav>
