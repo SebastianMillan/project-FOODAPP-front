@@ -1,0 +1,31 @@
+import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+import { OrderCocinero, OrderListCocineroResponse } from '../models/order-list-cocinero.interface';
+import { environment } from '../../environment/environment';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class PedidoService {
+
+  constructor(private http: HttpClient) { }
+
+  getCocineroOrders(page: number): Observable<OrderListCocineroResponse>{
+    return this.http.get<OrderListCocineroResponse>(`${environment.apiBaseUrl}/cocinero/pedido?page=${page}`, {
+      headers: {
+        'Authorization': `Bearer ${localStorage.getItem('token')}`
+      }
+    })
+  }
+
+  changeEstadoPedidoCocinero(estadoPedido: string, id:string): Observable<OrderCocinero>{
+    return this.http.put<OrderCocinero>(`${environment.apiBaseUrl}/cocinero/pedido/${id}`, {
+      estadoPedido: estadoPedido
+    },{
+      headers: {
+        'Authorization': `Bearer ${localStorage.getItem('token')}`
+      }
+    })
+  }
+}
