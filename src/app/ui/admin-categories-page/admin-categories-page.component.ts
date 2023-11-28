@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { CategoriaRowResponse } from '../../models/categoria-row.interface';
 import { CategoriaService } from '../../services/categoria.service';
 import { NuevaCategoriaResponse } from '../../models/new-categoria.interface';
@@ -10,9 +10,10 @@ import { Router } from '@angular/router';
   styleUrl: './admin-categories-page.component.css',
 })
 export class AdminCategoriesPageComponent implements OnInit {
+
   categorias: CategoriaRowResponse[] = [];
   mostrarFormulario: boolean = false;
-  nombreCategoria: string = '';
+  nombreCategoria: String = '';
 
   constructor(
     private categoriaService: CategoriaService,
@@ -29,9 +30,9 @@ export class AdminCategoriesPageComponent implements OnInit {
     this.categoriaService
       .addCategoria(this.nombreCategoria)
       .subscribe((categoria: NuevaCategoriaResponse) => {
+        alert(`Categoria ${categoria.nombre} añadida correctamente`);
         this.actualizarListaCategorias();
         this.route.navigate([`/admin/categorias`]);
-        alert(`Categoria ${categoria.nombre} añadida correctamente`);
       });
   }
 
@@ -43,5 +44,9 @@ export class AdminCategoriesPageComponent implements OnInit {
 
   cancelar() {
     this.mostrarFormulario = false;
+  }
+
+  setNombreCategoria($event: String){
+    this.nombreCategoria = $event;
   }
 }
