@@ -7,11 +7,13 @@ import { Router } from '@angular/router';
   templateUrl: './login-page.component.html',
   styleUrl: './login-page.component.css'
 })
+
 export class LoginPageComponent implements OnInit {
 
   username = '';
   password = '';
   rol: string[] = [];
+
 
   constructor(private accountService: AccountService, private router: Router) { }
 
@@ -43,5 +45,9 @@ export class LoginPageComponent implements OnInit {
         this.router.navigateByUrl('/login');
       }
     })
+  }
+
+  goToRegister() {
+    this.router.navigateByUrl('/register');
   }
 }
