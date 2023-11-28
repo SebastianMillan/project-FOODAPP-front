@@ -112,7 +112,6 @@ import { FormEditTrabajadorComponent } from './ui/form-edit-trabajador/form-edit
     UserEditPageComponent,
     UserEditPageComponent,
     FormEditTrabajadorComponent
-
   ],
   imports: [
     BrowserModule,
