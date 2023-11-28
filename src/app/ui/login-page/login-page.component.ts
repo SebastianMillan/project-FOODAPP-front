@@ -16,7 +16,10 @@ export class LoginPageComponent implements OnInit {
 
   ngOnInit(): void {
     let token = localStorage.getItem('token');
+
     if (token != null) {
+      debugger;
+
       this.router.navigateByUrl('/home');
     }
   }
@@ -26,6 +29,8 @@ export class LoginPageComponent implements OnInit {
       localStorage.setItem('account_id', resp.id)
       localStorage.setItem('token', resp.token);
       this.router.navigateByUrl('/cliente/home');
+      debugger;
+
     })
   }
 }

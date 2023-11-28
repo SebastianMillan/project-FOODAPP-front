@@ -60,6 +60,7 @@ import { FormEditTrabajadorComponent } from './ui/form-edit-trabajador/form-edit
 import { ModalComponent } from './components/modal/modal.component';
 import { ClientSectionComponent } from './sections/client-section/client-section.component';
 import { BotonEditTrabajadorComponent } from './components/boton-edit-trabajador/boton-edit-trabajador.component';
+import { AdminSectionComponent } from './sections/admin-section/admin-section.component';
 
 @NgModule({
   declarations: [
@@ -116,7 +117,8 @@ import { BotonEditTrabajadorComponent } from './components/boton-edit-trabajador
     FormEditTrabajadorComponent,
     ModalComponent,
     ClientSectionComponent,
-    BotonEditTrabajadorComponent
+    BotonEditTrabajadorComponent,
+    AdminSectionComponent
 
   ],
   imports: [

@@ -16,6 +16,7 @@ import { UserEditPageComponent } from './ui/user-edit-page/user-edit-page.compon
 import { CookPageComponent } from './ui/cook-page/cook-page.component';
 import { FormEditTrabajadorComponent } from './ui/form-edit-trabajador/form-edit-trabajador.component';
 import { ClientSectionComponent } from './sections/client-section/client-section.component';
+import { AdminSectionComponent } from './sections/admin-section/admin-section.component';
 
 const routes: Routes = [
   {
@@ -25,18 +26,23 @@ const routes: Routes = [
       { path: 'home', component: HomePageComponent },
     ]
   },
-  { path: 'admin/categorias/:nombreCategoria', component: AdminVerticalProductListComponent },
-  { path: 'admin/trabajador/form', component: FormTrabajadorComponent },
-  { path: 'admin/trabajador/edit/form/:id', component: FormEditTrabajadorComponent },
-  { path: 'admin/trabajador', component: AdminWorkersPageComponent },
+  {
+    path: 'admin', component: AdminSectionComponent, children: [
+      { path: 'admin/categorias/:nombreCategoria', component: AdminVerticalProductListComponent },
+      { path: 'admin/trabajador/form', component: FormTrabajadorComponent },
+      { path: 'admin/trabajador/edit/form/:id', component: FormEditTrabajadorComponent },
+      { path: 'admin/trabajador', component: AdminWorkersPageComponent },
+      { path: 'admin/categorias', component: AdminCategoriesPageComponent },
+      { path: 'admin/cliente', component: AdminClientsPageComponent },
+      { path: 'admin/cliente/:id', component: AdminClientDetailPageComponent },
+      { path: 'admin/add/producto', component: AdminProductDetailPageComponent },
+      { path: 'admin/edit/producto/:id', component: ProductEditPageComponent },
+    ]
+  },
+
   { path: 'cocinero/pedidos', component: CookPageComponent },
-  { path: 'admin/categorias', component: AdminCategoriesPageComponent },
   { path: 'login', component: LoginPageComponent },
-  { path: 'admin/cliente', component: AdminClientsPageComponent },
-  { path: 'admin/cliente/:id', component: AdminClientDetailPageComponent },
   { path: 'register', component: RegisterPageComponent },
-  { path: 'admin/add/producto', component: AdminProductDetailPageComponent },
-  { path: 'admin/edit/producto/:id', component: ProductEditPageComponent },
   { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: '**', component: HomePageComponent },
 ];
