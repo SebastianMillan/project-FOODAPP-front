@@ -8,14 +8,15 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class BotonEditTrabajadorComponent {
 
-  id!: string;
+  @Input() id!: string;
   route: ActivatedRoute = inject(ActivatedRoute);
 
   constructor(private router: Router) {
-    this.id = this.route.snapshot.params['id'];
+
   }
 
   irAforumulario() {
     this.router.navigate([`admin/trabajador/edit/form/${this.id}`]);
+    console.log(this.id);
   }
 }
