@@ -49,7 +49,15 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
 import { FormTrabajadorComponent } from './ui/form-trabajador/form-trabajador.component';
+
+import { BotonDeteleTrabajadorComponent } from './components/boton-detele-trabajador/boton-detele-trabajador.component';
+
 import { UserDetailPageComponent } from './ui/user-detail-page/user-detail-page.component';
+import { ProductEditPageComponent } from './ui/product-edit-page/product-edit-page.component';
+
+import { UserEditPageComponent } from './ui/user-edit-page/user-edit-page.component';
+import { FormEditTrabajadorComponent } from './ui/form-edit-trabajador/form-edit-trabajador.component';
+
 
 @NgModule({
   declarations: [
@@ -98,7 +106,13 @@ import { UserDetailPageComponent } from './ui/user-detail-page/user-detail-page.
     DeliveryPageComponent,
     CookPageComponent,
     FormTrabajadorComponent,
+    BotonDeteleTrabajadorComponent,
     UserDetailPageComponent,
+    ProductEditPageComponent,
+    UserEditPageComponent,
+    UserEditPageComponent,
+    FormEditTrabajadorComponent
+
   ],
   imports: [
     BrowserModule,

@@ -17,5 +17,6 @@ export class VerticalCategoryListComponent{
     this.categoriaService.getCategorias().subscribe(resp => {
       this.listCategoria = resp;
     })
+
   }
 }

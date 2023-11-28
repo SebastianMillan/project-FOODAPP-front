@@ -1,21 +1,23 @@
 <div class="container">
     <div class="row">
         <div class="col-4 text-center">
-            <img [src]="loggedUser?.avatar" alt="imagen perfil" class="rounded-circle border-3 border-white border"><br>
+            <img [src]="loggedUser?.avatar" alt="imagen perfil"
+                class="rounded-circle border-3 border-white border w-100"><br>
         </div>
         <div class="col-7">
             <div class="row">
                 <div class="col-12 mb-4">
-                    <h2 class="fw-bold text-white fs-1">{{loggedUser?.nombre}} <span
-                            class="badge rounded-pill bg-warning text-dark ms-4">{{loggedUser?.roles}}</span></h2><br>
-                    <span class="fst-italic text-white fs-2">{{loggedUser?.username}}</span><br>
+                    <h2 class="fw-bold text-white fs-1">{{loggedUser?.nombre}}</h2><br>
                     <span class="fst-italic text-white fs-2">{{loggedUser?.email}}</span><br>
-                    <span class="text-white fs-5">+34 {{loggedUser?.telefono}}</span><br>
+                    <span class="text-white fs-5">{{loggedUser?.poblacion}}</span><br>
+                    <span class="text-white fs-5">{{loggedUser?.direccion}}</span><br>
+                    <span class="text-white fs-5">{{loggedUser?.codPostal}}</span><br>
+
                 </div>
             </div>
         </div>
         <div class="col-1">
-            <button type="button" class="btn border-white text-white rounded-5 p-3">
+            <button type="button" class="btn border-white text-white rounded-5 p-3" (click)="navigateToEdit()">
                 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
                     class="bi bi-pen-fill" viewBox="0 0 16 16">
                     <path

@@ -11,19 +11,27 @@ import { FormTrabajadorComponent } from './ui/form-trabajador/form-trabajador.co
 import { AdminClientsPageComponent } from './ui/admin-clients-page/admin-clients-page.component';
 import { AdminProductDetailPageComponent } from './ui/admin-product-detail-page/admin-product-detail-page.component';
 import { UserDetailPageComponent } from './ui/user-detail-page/user-detail-page.component';
+import { ProductEditPageComponent } from './ui/product-edit-page/product-edit-page.component';
+import { UserEditPageComponent } from './ui/user-edit-page/user-edit-page.component';
+import { CookPageComponent } from './ui/cook-page/cook-page.component';
+import { FormEditTrabajadorComponent } from './ui/form-edit-trabajador/form-edit-trabajador.component';
 
 const routes: Routes = [
   { path: 'home', component: HomePageComponent },
   { path: 'admin/categorias/:nombreCategoria', component: AdminVerticalProductListComponent },
   { path: 'admin/trabajador/form', component: FormTrabajadorComponent },
+  { path: 'admin/trabajador/edit/form/:id', component: FormEditTrabajadorComponent },
   { path: 'admin/trabajador', component: AdminWorkersPageComponent },
+  { path: 'cocinero/pedidos', component: CookPageComponent },
   { path: 'admin/categorias', component: AdminCategoriesPageComponent },
   { path: 'login', component: LoginPageComponent },
   { path: 'profile', component: UserDetailPageComponent },
+  { path: 'profile/edit', component: UserEditPageComponent },
   { path: 'admin/cliente', component: AdminClientsPageComponent },
   { path: 'admin/cliente/:id', component: AdminClientDetailPageComponent },
   { path: 'register', component: RegisterPageComponent },
   { path: 'admin/add/producto', component: AdminProductDetailPageComponent },
+  { path: 'admin/edit/producto/:id', component: ProductEditPageComponent },
   { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: '**', component: HomePageComponent },
 ];
