@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ProductService } from '../../services/product.service';
-import { ProductAllDetails } from '../../models/new-product.interface';
+import { Categoria, ProductAllDetails } from '../../models/new-product.interface';
+import { CategoriaService } from '../../services/categoria.service';
 
 
 @Component({
@@ -8,7 +9,8 @@ import { ProductAllDetails } from '../../models/new-product.interface';
   templateUrl: './product-card-v2.component.html',
   styleUrl: './product-card-v2.component.css'
 })
-export class ProductCardV2Component{
+export class ProductCardV2Component {
 
+  constructor(private service: CategoriaService) { }
 
 }
