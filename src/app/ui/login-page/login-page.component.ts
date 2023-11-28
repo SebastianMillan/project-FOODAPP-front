@@ -11,6 +11,7 @@ export class LoginPageComponent implements OnInit {
 
   username = '';
   password = '';
+  rol: string[] = [];
 
   constructor(private accountService: AccountService, private router: Router) { }
 
@@ -18,8 +19,6 @@ export class LoginPageComponent implements OnInit {
     let token = localStorage.getItem('token');
 
     if (token != null) {
-      debugger;
-
       this.router.navigateByUrl('/home');
     }
   }
@@ -27,10 +26,23 @@ export class LoginPageComponent implements OnInit {
   login() {
     this.accountService.loginAccount(this.username, this.password).subscribe(resp => {
       localStorage.setItem('account_id', resp.id)
-      localStorage.setItem('token', resp.token);
-      this.router.navigateByUrl('/cliente/home');
-      debugger;
+      localStorage.setItem('token', resp.token)
+      this.rol = resp.roles;
 
+      if (this.rol.includes('ADMIN')) {
+
+        this.router.navigateByUrl('admin/cliente');
+
+      } else if (this.rol.includes('CLIENTE')) {
+
+        this.router.navigateByUrl('/cliente/home');
+
+      } else {
+
+        this.router.navigateByUrl('/home');
+      }
+
+      this.router.navigateByUrl('/cliente/home');
     })
   }
 }

@@ -28,15 +28,15 @@ const routes: Routes = [
   },
   {
     path: 'admin', component: AdminSectionComponent, children: [
-      { path: 'admin/categorias/:nombreCategoria', component: AdminVerticalProductListComponent },
-      { path: 'admin/trabajador/form', component: FormTrabajadorComponent },
-      { path: 'admin/trabajador/edit/form/:id', component: FormEditTrabajadorComponent },
-      { path: 'admin/trabajador', component: AdminWorkersPageComponent },
-      { path: 'admin/categorias', component: AdminCategoriesPageComponent },
-      { path: 'admin/cliente', component: AdminClientsPageComponent },
-      { path: 'admin/cliente/:id', component: AdminClientDetailPageComponent },
-      { path: 'admin/add/producto', component: AdminProductDetailPageComponent },
-      { path: 'admin/edit/producto/:id', component: ProductEditPageComponent },
+      { path: 'categorias/:nombreCategoria', component: AdminVerticalProductListComponent },
+      { path: 'trabajador/form', component: FormTrabajadorComponent },
+      { path: 'trabajador/edit/form/:id', component: FormEditTrabajadorComponent },
+      { path: 'trabajador', component: AdminWorkersPageComponent },
+      { path: 'categorias', component: AdminCategoriesPageComponent },
+      { path: 'cliente', component: AdminClientsPageComponent },
+      { path: 'cliente/:id', component: AdminClientDetailPageComponent },
+      { path: 'add/producto', component: AdminProductDetailPageComponent },
+      { path: 'edit/producto/:id', component: ProductEditPageComponent },
     ]
   },
 
