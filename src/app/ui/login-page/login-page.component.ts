@@ -28,7 +28,8 @@ export class LoginPageComponent implements OnInit {
       localStorage.setItem('account_id', resp.id)
       localStorage.setItem('token', resp.token)
       this.rol = resp.roles;
-
+      debugger;
+      console.log(this.rol);
       if (this.rol.includes('ADMIN')) {
 
         this.router.navigateByUrl('admin/cliente');
