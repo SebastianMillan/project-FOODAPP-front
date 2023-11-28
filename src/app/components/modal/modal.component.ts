@@ -1,6 +1,7 @@
 import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { ClientDetailResponse } from '../../models/client-detail.interface';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-modal',
@@ -12,7 +13,7 @@ export class ModalComponent {
   @ViewChild('miModal') miModal!: ElementRef;
   @Input() usuarioLogueado!: ClientDetailResponse;
 
-  constructor(private modalService: NgbModal) { }
+  constructor(private modalService: NgbModal, private route: Router) { }
 
 
 
@@ -26,4 +27,11 @@ export class ModalComponent {
         scrollable: true
       });
   }
+
+  cerrarSesion() {
+    localStorage.clear();
+    this.route.navigateByUrl('/login');
+  }
+
+
 }
