@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { ProductService } from '../../services/product.service';
 import { Categoria, ProductAllDetails } from '../../models/new-product.interface';
 import { CategoriaService } from '../../services/categoria.service';
+import { CategoryProductResponse } from '../../models/CategoriaConProductos.interface';
 
 
 @Component({
@@ -11,6 +12,8 @@ import { CategoriaService } from '../../services/categoria.service';
 })
 export class ProductCardV2Component {
 
-  constructor(private service: CategoriaService) { }
+  @Input() cat!: CategoryProductResponse;
+
+
 
 }
