@@ -60,6 +60,7 @@ import { ModalComponent } from './components/modal/modal.component';
 import { ClientSectionComponent } from './sections/client-section/client-section.component';
 import { BotonEditTrabajadorComponent } from './components/boton-edit-trabajador/boton-edit-trabajador.component';
 import { AdminSectionComponent } from './sections/admin-section/admin-section.component';
+import { ModalAdminComponent } from './components/modal-admin/modal-admin.component';
 
 @NgModule({
   declarations: [
@@ -116,7 +117,8 @@ import { AdminSectionComponent } from './sections/admin-section/admin-section.co
     ModalComponent,
     ClientSectionComponent,
     BotonEditTrabajadorComponent,
-    AdminSectionComponent
+    AdminSectionComponent,
+    ModalAdminComponent
 
   ],
   imports: [

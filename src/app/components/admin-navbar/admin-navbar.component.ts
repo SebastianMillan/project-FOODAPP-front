@@ -3,6 +3,8 @@ import { ClientDetailResponse } from '../../models/client-detail.interface';
 import { AdminService } from '../../services/admin.service';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Router } from '@angular/router';
+import { TrabajadorServiceTsService } from '../../services/trabajador.service.ts.service';
+import { Trabajador } from '../../models/Get-trabajador.interface';
 
 @Component({
   selector: 'app-admin-navbar',
@@ -11,16 +13,20 @@ import { Router } from '@angular/router';
 })
 export class AdminNavbarComponent implements OnInit {
 
-  usuarioLogueado!: ClientDetailResponse;
+  admin!: Trabajador;
+  accountId!: string;
 
-  constructor(private adminService: AdminService, private modalService: NgbModal, private route: Router) { }
+  constructor(private trabajadorService: TrabajadorServiceTsService, private modalService: NgbModal, private route: Router) { }
 
   ngOnInit(): void {
-    this.adminService.getLoggedUser().subscribe(resp => {
-      debugger;
-      this.usuarioLogueado = resp;
-      console.log(this.usuarioLogueado);
-    })
+    this.accountId = localStorage.getItem('account_id') as string;
+    if (this.accountId !== null) {
+      this.trabajadorService.getTrabajador(this.accountId).subscribe(resp => {
+
+        this.admin = resp;
+        console.log(this.admin);
+      });
+    }
   }
 
   cerrarSesion() {
