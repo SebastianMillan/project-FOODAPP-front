@@ -40,10 +40,8 @@ export class LoginPageComponent implements OnInit {
 
       } else {
 
-        this.router.navigateByUrl('/home');
+        this.router.navigateByUrl('/login');
       }
-
-      this.router.navigateByUrl('/cliente/home');
     })
   }
 }
