@@ -13,16 +13,19 @@ import { AdminProductDetailPageComponent } from './ui/admin-product-detail-page/
 import { UserDetailPageComponent } from './ui/user-detail-page/user-detail-page.component';
 import { ProductEditPageComponent } from './ui/product-edit-page/product-edit-page.component';
 import { UserEditPageComponent } from './ui/user-edit-page/user-edit-page.component';
+import { MenuPageComponent } from './ui/menu-page/menu-page.component';
 import { CookPageComponent } from './ui/cook-page/cook-page.component';
 import { FormEditTrabajadorComponent } from './ui/form-edit-trabajador/form-edit-trabajador.component';
 import { ClientSectionComponent } from './sections/client-section/client-section.component';
 import { AdminSectionComponent } from './sections/admin-section/admin-section.component';
+
 
 const routes: Routes = [
   {
     path: 'cliente', component: ClientSectionComponent, children: [
       { path: 'profile', component: UserDetailPageComponent },
       { path: 'profile/edit', component: UserEditPageComponent },
+      { path: 'menu', component: MenuPageComponent },
       { path: 'home', component: HomePageComponent },
     ]
   },
@@ -43,6 +46,9 @@ const routes: Routes = [
   { path: 'cocinero/pedidos', component: CookPageComponent },
   { path: 'login', component: LoginPageComponent },
   { path: 'register', component: RegisterPageComponent },
+
+  { path: 'admin/add/producto', component: AdminProductDetailPageComponent },
+  { path: 'admin/edit/producto/:id', component: ProductEditPageComponent },
   { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: '**', component: HomePageComponent },
 ];
