@@ -30,8 +30,8 @@ export class ModalComponent {
 
   cerrarSesion() {
     localStorage.clear();
+    this.modalService.dismissAll('Cerrar sesión')
     this.route.navigateByUrl('/login');
   }
-
 
 }

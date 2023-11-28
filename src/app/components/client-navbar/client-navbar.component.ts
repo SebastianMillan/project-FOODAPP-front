@@ -13,7 +13,7 @@ export class ClientNavbarComponent implements OnInit {
   usuarioLogueado!: ClientDetailResponse;
 
 
-  constructor(private usuarioService: AdminService,) { }
+  constructor(private usuarioService: AdminService) { }
 
   ngOnInit(): void {
     this.usuarioService.getLoggedUser().subscribe(resp => {
