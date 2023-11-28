@@ -14,17 +14,22 @@ import { UserDetailPageComponent } from './ui/user-detail-page/user-detail-page.
 import { ProductEditPageComponent } from './ui/product-edit-page/product-edit-page.component';
 import { UserEditPageComponent } from './ui/user-edit-page/user-edit-page.component';
 import { FormEditTrabajadorComponent } from './ui/form-edit-trabajador/form-edit-trabajador.component';
+import { ClientSectionComponent } from './sections/client-section/client-section.component';
 
 const routes: Routes = [
-  { path: 'home', component: HomePageComponent },
+  {
+    path: 'cliente', component: ClientSectionComponent, children: [
+      { path: 'profile', component: UserDetailPageComponent },
+      { path: 'profile/edit', component: UserEditPageComponent },
+      { path: 'home', component: HomePageComponent },
+    ]
+  },
   { path: 'admin/categorias/:nombreCategoria', component: AdminVerticalProductListComponent },
   { path: 'admin/trabajador/form', component: FormTrabajadorComponent },
   { path: 'admin/trabajador/edit/form/:id', component: FormEditTrabajadorComponent },
   { path: 'admin/trabajador', component: AdminWorkersPageComponent },
   { path: 'admin/categorias', component: AdminCategoriesPageComponent },
   { path: 'login', component: LoginPageComponent },
-  { path: 'profile', component: UserDetailPageComponent },
-  { path: 'profile/edit', component: UserEditPageComponent },
   { path: 'admin/cliente', component: AdminClientsPageComponent },
   { path: 'admin/cliente/:id', component: AdminClientDetailPageComponent },
   { path: 'register', component: RegisterPageComponent },

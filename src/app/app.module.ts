@@ -58,6 +58,7 @@ import { ProductEditPageComponent } from './ui/product-edit-page/product-edit-pa
 import { UserEditPageComponent } from './ui/user-edit-page/user-edit-page.component';
 import { FormEditTrabajadorComponent } from './ui/form-edit-trabajador/form-edit-trabajador.component';
 import { ModalComponent } from './components/modal/modal.component';
+import { ClientSectionComponent } from './sections/client-section/client-section.component';
 
 @NgModule({
   declarations: [
@@ -112,7 +113,8 @@ import { ModalComponent } from './components/modal/modal.component';
     UserEditPageComponent,
     UserEditPageComponent,
     FormEditTrabajadorComponent,
-    ModalComponent
+    ModalComponent,
+    ClientSectionComponent
 
   ],
   imports: [
