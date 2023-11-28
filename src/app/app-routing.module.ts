@@ -13,9 +13,11 @@ import { AdminProductDetailPageComponent } from './ui/admin-product-detail-page/
 import { UserDetailPageComponent } from './ui/user-detail-page/user-detail-page.component';
 import { ProductEditPageComponent } from './ui/product-edit-page/product-edit-page.component';
 import { UserEditPageComponent } from './ui/user-edit-page/user-edit-page.component';
+import { MenuPageComponent } from './ui/menu-page/menu-page.component';
 import { CookPageComponent } from './ui/cook-page/cook-page.component';
 import { FormEditTrabajadorComponent } from './ui/form-edit-trabajador/form-edit-trabajador.component';
 import { OrderDetailPageComponent } from './ui/order-detail-page/order-detail-page.component';
+
 
 const routes: Routes = [
   { path: 'home', component: HomePageComponent },
@@ -34,6 +36,7 @@ const routes: Routes = [
   { path: 'admin/add/producto', component: AdminProductDetailPageComponent },
   { path: 'admin/edit/producto/:id', component: ProductEditPageComponent },
   { path: 'admin/pedidos', component: OrderDetailPageComponent},
+  { path: 'menu', component: MenuPageComponent},
   { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: '**', component: HomePageComponent },
 ];

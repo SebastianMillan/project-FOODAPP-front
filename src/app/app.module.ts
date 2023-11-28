@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { RegisterComponent } from './components/register/register.component';
 import { HorizontalProductListComponent } from './components/horizontal-product-list/horizontal-product-list.component';
 import { VerticalCategoryWithProductListComponent } from './components/vertical-category-with-product-list/vertical-category-with-product-list.component';
 import { VerticalProductListComponent } from './components/vertical-product-list/vertical-product-list.component';
@@ -61,7 +60,6 @@ import { FormEditTrabajadorComponent } from './ui/form-edit-trabajador/form-edit
 @NgModule({
   declarations: [
     AppComponent,
-    RegisterComponent,
     HorizontalProductListComponent,
     VerticalCategoryWithProductListComponent,
     VerticalProductListComponent,

@@ -11,4 +11,12 @@ export class VerticalCategoryListComponent{
 
   @Input() listCategoria: CategoriaRowResponse [] = [];
 
+  constructor(private categoriaService: CategoriaService) { }
+
+  getCategories(){
+    this.categoriaService.getCategorias().subscribe(resp => {
+      this.listCategoria = resp;
+    })
+
+  }
 }

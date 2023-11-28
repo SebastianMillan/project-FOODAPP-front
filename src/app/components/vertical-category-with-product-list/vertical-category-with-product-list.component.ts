@@ -1,7 +1,7 @@
 import { Component, OnInit, inject } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ProductRowResponse } from '../../models/product-row.interface';
-import { CategoryService } from '../../services/category.service';
+import { CategoriaService } from '../../services/categoria.service';
 
 @Component({
   selector: 'app-vertical-category-with-product-list',
@@ -14,7 +14,7 @@ export class VerticalCategoryWithProductListComponent implements OnInit {
   nombreCategoria!: string;
   route: ActivatedRoute = inject(ActivatedRoute);
 
-  constructor(private service: CategoryService) {
+  constructor(private service: CategoriaService) {
     this.nombreCategoria = this.route.snapshot.params['nombreCategoria'];
   }
 
