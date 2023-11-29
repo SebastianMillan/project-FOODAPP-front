@@ -24,8 +24,8 @@ export class OrderService {
     );
   }
 
-  getOrderDetails(): Observable<OrderDetailsResponse[]> {
-    return this.http.get<OrderDetailsResponse[]>(`${environment.apiBaseUrl}/admin/pedido`,
+  getOrderDetails(page: number): Observable<OrderDetailsResponse> {
+    return this.http.get<OrderDetailsResponse>(`${environment.apiBaseUrl}/admin/pedido?page=${page}`,
       {
         headers: {
           'Authorization': `Bearer ${localStorage.getItem('token')}`

@@ -19,6 +19,9 @@
     <app-admin-row-vertical *ngFor=" let o of orderList" [order]="o" (orderClick)="open(o.id, lnModal)">
     </app-admin-row-vertical>
 </div>
+<ngb-pagination [collectionSize]="totalPedidos" [pageSize]="cantPaginas" [maxSize]="pedidosPorPagina" [(page)]="pagina"
+    aria-label="Default pagination"
+    class="d-flex justify-content-center mt-5" (pageChange)="ngOnInit()"></ngb-pagination>
 
 <ng-template #lnModal let-modal>
     <div class="modal-header bg-dark">
