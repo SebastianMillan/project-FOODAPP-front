@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Pedidos } from '../../models/PedidoRepartidor.interface';
 
 @Component({
   selector: 'app-vertical-delivery-list',
@@ -7,4 +8,5 @@ import { Component } from '@angular/core';
 })
 export class VerticalDeliveryListComponent {
 
+  @Input() pedidosRepartidor: Pedidos[] = [];
 }
