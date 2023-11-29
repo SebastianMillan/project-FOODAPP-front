@@ -30,6 +30,7 @@ export class ModalComponent {
 
   misDatos() {
     this.route.navigate([`cliente/profile`]);
+    this.modalService.dismissAll('Mis Datos')
   }
 
   cerrarSesion() {
