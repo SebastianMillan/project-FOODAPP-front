@@ -18,6 +18,8 @@ import { CookPageComponent } from './ui/cook-page/cook-page.component';
 import { FormEditTrabajadorComponent } from './ui/form-edit-trabajador/form-edit-trabajador.component';
 import { OrderDetailPageComponent } from './ui/order-detail-page/order-detail-page.component';
 import { AdminOrdersPageComponent } from './ui/admin-orders-page/admin-orders-page.component';
+import { VerticalLineOrderListComponent } from './components/vertical-line-order-list/vertical-line-order-list.component';
+
 
 
 const routes: Routes = [
@@ -27,6 +29,7 @@ const routes: Routes = [
   { path: 'admin/trabajador/edit/form/:id', component: FormEditTrabajadorComponent },
   { path: 'admin/trabajador', component: AdminWorkersPageComponent },
   { path: 'cocinero/pedidos', component: CookPageComponent },
+  { path: 'pedido/:id', component: OrderDetailPageComponent },
   { path: 'admin/categorias', component: AdminCategoriesPageComponent },
   { path: 'login', component: LoginPageComponent },
   { path: 'profile', component: UserDetailPageComponent },

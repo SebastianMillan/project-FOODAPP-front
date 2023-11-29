@@ -1,0 +1,18 @@
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-6 text-light">
+            <h3 class="ms-4">PRODUCTO</h3>
+        </div>
+        <div class="col-2 text-center text-light">
+            <h3 class="ms-3">CANTIDAD</h3>
+        </div>
+        <div class="col-2 text-center text-light">
+            <h3 class="me-2">PRECIO UNIT.</h3>
+        </div>
+        <div class="col-2 text-light text-center">
+            <h3 class="me-3">SUBTOTAL</h3>
+        </div>
+        <app-line-order-row *ngFor="let ln of listLineaPedido" [lineaPedido]="ln"
+            class="m-0 p-0 text-light p-3"></app-line-order-row>
+    </div>
+</div>

@@ -110,7 +110,8 @@ import { AdminRowVerticalComponent } from './components/admin-row-vertical/admin
     UserEditPageComponent,
     UserEditPageComponent,
     FormEditTrabajadorComponent,
-    AdminRowVerticalComponent
+    AdminRowVerticalComponent,
+    FormEditTrabajadorComponent
 
   ],
   imports: [
@@ -121,9 +122,9 @@ import { AdminRowVerticalComponent } from './components/admin-row-vertical/admin
     HttpClientModule,
     FormsModule
   ],
-  providers: 
+  providers:
     [provideHttpClient(withFetch())],
-    bootstrap: [AppComponent]
- 
+  bootstrap: [AppComponent]
+
 })
 export class AppModule { }

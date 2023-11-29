@@ -1,0 +1,14 @@
+<<<<<<< HEAD
+=======
+
+<div class="container">
+    <h1 class="text-center text-white fw-bold">Datos del Pedido</h1>
+    <span class="text-warning fs-4">Dirección: <span class="text-white fs-4">{{pedido?.direccion}}</span></span><br>
+    <span class="text-warning fs-4">Estado: <span class="text-white fs-4">{{formatName()}}</span></span><br>
+    <span class="text-warning fs-4">Hora de llegada: <span class="text-white fs-4">{{pedido?.horaLlegada}}</span></span><br>
+    <span class="text-warning fs-4">Telefono: <span class="text-white fs-4">{{pedido?.telefono}}</span></span><br>
+    <span class="text-warning fs-4">Importe total: <span class="text-white fs-4">{{getImporteTotal()}}€</span></span><br>
+    <button type="button" class="btn btn-warning text-center" *ngIf="comprobarPedidoOpen()">CONFIRMAR</button>
+</div>
+<app-vertical-line-order-list [listLineaPedido]="lineasPedido"></app-vertical-line-order-list>
+>>>>>>> main
