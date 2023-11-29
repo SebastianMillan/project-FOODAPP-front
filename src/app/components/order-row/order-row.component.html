@@ -1,23 +1,39 @@
+<tbody>
+    <tr>
+        <td>{{order.cliente}}</td>
+        <td>{{order.id}}</td>
+        <td>{{order.fecha}}</td>
+        <td>{{order.estadoPedido}}</td>
+        <td><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="yellow" class="bi bi-search"
+                viewBox="0 0 16 16">
+                <path
+                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+            </svg></td>
+    </tr>
+</tbody>
+
 <div class="container">
-    <div class="row border border-light border-3 py-4 rounded-2">
-        <div class="col-3 text-center mt-2">
-            <span class="text-white fs-4">{{pedidoToShow.estadoPedido}}</span>
-        </div>
-        <div class="col-3 text-center mt-2">
-            <span class="text-white fs-4">{{pedidoToShow.fecha}}</span>
-        </div>
-        <div class="col-3 text-center mt-2">
-            <span class="text-white fs-4">{{redondearImporte()}}€</span>
-        </div>
-        <div class="col-3 text-center">
-            <button class="btn btn-link" (click)="showDetails()">
-                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="yellow"
-                    class="bi bi-search mt-1"
-                    viewBox="0 0 16 16">
-                    <path
-                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
-                </svg>
-            </button>
+
+    <div class="container mt-3">
+
+        <div class="row border border-light border-3 py-4 rounded-2">
+            <div class="col-3 text-center mt-2">
+                <span class="text-white fs-4">{{pedidoToShow.estadoPedido}}</span>
+            </div>
+            <div class="col-3 text-center mt-2">
+                <span class="text-white fs-4">{{pedidoToShow.fecha}}</span>
+            </div>
+            <div class="col-3 text-center mt-2">
+                <span class="text-white fs-4">{{redondearImporte()}}€</span>
+            </div>
+            <div class="col-3 text-center">
+                <button class="btn btn-link" (click)="showDetails()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="yellow"
+                        class="bi bi-search mt-1" viewBox="0 0 16 16">
+                        <path
+                            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                    </svg>
+                </button>
+            </div>
         </div>
     </div>
-</div>

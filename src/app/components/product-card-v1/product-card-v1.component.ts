@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { ProductCardResponse } from '../../models/product-card.interface';
+import { PedidoService } from '../../services/pedido.service';
 
 @Component({
   selector: 'app-product-card-v1',
@@ -8,5 +9,11 @@ import { ProductCardResponse } from '../../models/product-card.interface';
 })
 export class ProductCardV1Component {
 
-  @Input() producto: ProductCardResponse | undefined;
+  @Input() producto!: ProductCardResponse;
+
+  constructor(private pedidoService: PedidoService){}
+
+  addToCarrito() {
+    this.pedidoService.addProductoToCarrito(this.producto?.id).subscribe();
+  }
 }

@@ -1,1 +1,53 @@
-<p>admin-orders-page works!</p>
+<div class="container mt-5">
+    <div class="d-flex justify-content-around">
+        <div class=" text-center text-light">
+            <h3 class="ms-4" style="color: #FFC529;">ID_CLIENTE</h3>
+        </div>
+        <div class=" text-center text-light">
+            <h3 class="ms-2" style="color: #FFC529;">IMPORTE</h3>
+        </div>
+        <div class=" text-center text-light">
+            <h3 class="me-2" style="color: #FFC529;">FECHA</h3>
+        </div>
+        <div class=" text-light text-center">
+            <h3 class="me-3" style="color: #FFC529;">ESTADO</h3>
+        </div>
+        <div class=" text-light text-center">
+            <h3 class="me-4" style="color: #FFC529;">Detalles</h3>
+        </div>
+    </div>
+    <app-admin-row-vertical *ngFor=" let o of orderList" [order]="o" (orderClick)="open(o.id, lnModal)">
+    </app-admin-row-vertical>
+</div>
+
+<ng-template #lnModal let-modal>
+    <div class="modal-header bg-dark">
+        <h4 class="modal-title text-light" id="modal-basic-title">Linea Pedido</h4>
+        <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+    </div>
+    <div class="modal-body bg-dark">
+        <div class="d-flex justify-content-around">
+            <div class="text-center text-light">
+                <h6 class="ms-4">PRODUCTO</h6>
+            </div>
+            <div class="text-center text-light">
+                <h6 class="ms-2">PRECIO U</h6>
+            </div>
+            <div class="text-center text-light">
+                <h6 class="me-2">CANTIDAD</h6>
+            </div>
+            <div class="text-light text-center">
+                <h6 class="me-3">SUBTOTAL</h6>
+            </div>
+        </div>
+
+        <div class="pt-2" *ngFor="let ln of OrderSelected.lineasPedido; let i = index">
+            <div class="linea-pedido-container text-light d-flex justify-content-around border border-light">
+                <span>{{ln.nombreProducto}}</span>
+                <span>{{ln.precioUnit}}€</span>
+                <span>X{{ln.cantidadProductos}}</span>
+                <span>{{ln.subtotal}}€</span>
+            </div>
+        </div>
+    </div>
+</ng-template>
