@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -8,4 +9,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdminWorkersPageComponent {
 
+  constructor(private route: Router) { }
+
+  irAformulario() {
+    this.route.navigate([`admin/trabajador/form`]);
+  }
 }

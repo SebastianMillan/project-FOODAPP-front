@@ -17,11 +17,13 @@ import { MenuPageComponent } from './ui/menu-page/menu-page.component';
 import { CookPageComponent } from './ui/cook-page/cook-page.component';
 import { FormEditTrabajadorComponent } from './ui/form-edit-trabajador/form-edit-trabajador.component';
 import { OrderDetailPageComponent } from './ui/order-detail-page/order-detail-page.component';
+import { AdminOrdersPageComponent } from './ui/admin-orders-page/admin-orders-page.component';
 import { VerticalLineOrderListComponent } from './components/vertical-line-order-list/vertical-line-order-list.component';
 
 import { ClientSectionComponent } from './sections/client-section/client-section.component';
 import { AdminSectionComponent } from './sections/admin-section/admin-section.component';
 import { CocineroSectionComponent } from './sections/cocinero-section/cocinero-section.component';
+
 
 
 const routes: Routes = [
@@ -44,8 +46,10 @@ const routes: Routes = [
       { path: 'cliente/:id', component: AdminClientDetailPageComponent },
       { path: 'add/producto', component: AdminProductDetailPageComponent },
       { path: 'edit/producto/:id', component: ProductEditPageComponent },
-      { path: 'admin/add/producto', component: AdminProductDetailPageComponent },
-      { path: 'admin/edit/producto/:id', component: ProductEditPageComponent },
+      { path: 'add/producto', component: AdminProductDetailPageComponent },
+      { path: 'edit/producto/:id', component: ProductEditPageComponent },
+      { path: 'pedidos', component: AdminOrdersPageComponent },
+
     ]
   },
   {
@@ -57,7 +61,7 @@ const routes: Routes = [
 
   { path: 'login', component: LoginPageComponent },
   { path: 'register', component: RegisterPageComponent },
-
+  { path: 'menu', component: MenuPageComponent },
 
   { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: '**', component: HomePageComponent },

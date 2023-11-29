@@ -7,10 +7,11 @@
         </div>
         <div class="nav-item d-flex justitfy-content-center">
             <a [routerLink]="['/admin/trabajador']" class="nav-link">TRABAJADOR</a>
-            <a [routerLink]="['/pedido']" class="nav-link">CATEGORIA</a>
-            <a [routerLink]="['/pedido']" class="nav-link">PEDIDO</a>
+            <a [routerLink]="['/admin/categorias']" class="nav-link">CATEGORIA</a>
+            <a [routerLink]="['/admin/pedidos']" class="nav-link">PEDIDO</a>
             <a [routerLink]="['/admin/cliente']" class="nav-link">CLIENTE</a>
         </div>
         <app-modal-admin [admin]="admin"></app-modal-admin>
+        <button (click)="cerrarSesion()" style="color: aliceblue;">CERRAR</button>
     </div>
 </nav>

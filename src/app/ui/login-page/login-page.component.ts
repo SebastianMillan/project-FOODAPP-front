@@ -48,7 +48,7 @@ export class LoginPageComponent implements OnInit {
       console.log(this.rol);
       if (this.rol.includes('ADMIN')) {
 
-        this.router.navigateByUrl('admin/cliente');
+        this.router.navigateByUrl('/admin/pedidos');
 
       } else if (this.rol.includes('CLIENTE')) {
 
@@ -59,7 +59,7 @@ export class LoginPageComponent implements OnInit {
           this.router.navigateByUrl('cocinero/pedidos');
         }
       } else {
-        this.router.navigateByUrl('/admin/trabajador');
+        this.router.navigateByUrl('/login');
       }
     })
   }

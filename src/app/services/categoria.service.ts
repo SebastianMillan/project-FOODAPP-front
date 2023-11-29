@@ -42,7 +42,7 @@ export class CategoriaService {
   }
 
   getCategoryWithProducts(): Observable<CategoryProductResponse[]> {
-    return this.http.get<CategoryProductResponse[]>(`${environment.apiBaseUrl}/admin/menu2`,
+    return this.http.get<CategoryProductResponse[]>(`${environment.apiBaseUrl}/menu`,
       {
         headers: {
           'Authorization': `Bearer ${localStorage.getItem('token')}`

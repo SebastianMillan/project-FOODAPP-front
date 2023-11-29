@@ -44,16 +44,13 @@ import { AdminWorkersPageComponent } from './ui/admin-workers-page/admin-workers
 import { DeliveryPageComponent } from './ui/delivery-page/delivery-page.component';
 import { CookPageComponent } from './ui/cook-page/cook-page.component';
 import { HttpClientModule, provideHttpClient, withFetch } from '@angular/common/http';
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
 import { FormTrabajadorComponent } from './ui/form-trabajador/form-trabajador.component';
-
 import { BotonDeteleTrabajadorComponent } from './components/boton-detele-trabajador/boton-detele-trabajador.component';
-
 import { UserDetailPageComponent } from './ui/user-detail-page/user-detail-page.component';
 import { ProductEditPageComponent } from './ui/product-edit-page/product-edit-page.component';
-
 import { UserEditPageComponent } from './ui/user-edit-page/user-edit-page.component';
 import { FormEditTrabajadorComponent } from './ui/form-edit-trabajador/form-edit-trabajador.component';
 import { ModalComponent } from './components/modal/modal.component';
@@ -63,6 +60,12 @@ import { AdminSectionComponent } from './sections/admin-section/admin-section.co
 import { ModalAdminComponent } from './components/modal-admin/modal-admin.component';
 import { CocineroSectionComponent } from './sections/cocinero-section/cocinero-section.component';
 import { TrabajadorNavbarComponent } from './components/trabajador-navbar/trabajador-navbar.component';
+
+import { AdminRowVerticalComponent } from './components/admin-row-vertical/admin-row-vertical.component';
+
+
+
+
 
 @NgModule({
   declarations: [
@@ -116,6 +119,7 @@ import { TrabajadorNavbarComponent } from './components/trabajador-navbar/trabaj
     UserEditPageComponent,
     UserEditPageComponent,
 
+
     FormEditTrabajadorComponent,
     ModalComponent,
     ClientSectionComponent,
@@ -123,20 +127,27 @@ import { TrabajadorNavbarComponent } from './components/trabajador-navbar/trabaj
     AdminSectionComponent,
     ModalAdminComponent,
     CocineroSectionComponent,
-    TrabajadorNavbarComponent
+    TrabajadorNavbarComponent,
 
 
 
+
+    FormEditTrabajadorComponent,
+    AdminRowVerticalComponent,
+    FormEditTrabajadorComponent
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     NgbModule,
     HttpClientModule,
     FormsModule
   ],
-  providers: [provideHttpClient(withFetch())],
+  providers:
+    [provideHttpClient(withFetch())],
   bootstrap: [AppComponent]
+
 })
 export class AppModule { }
