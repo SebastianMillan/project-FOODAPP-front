@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { OrderDetailsResponse } from '../../models/order-details.interface';
+import { Order, OrderDetailsResponse } from '../../models/order-details.interface';
 
 @Component({
   selector: 'app-admin-row-vertical',
@@ -8,7 +8,7 @@ import { OrderDetailsResponse } from '../../models/order-details.interface';
 })
 export class AdminRowVerticalComponent {
 
-  @Input() order!: OrderDetailsResponse;
+  @Input() order!: Order;
   @Output() orderClick = new EventEmitter<string>();
 
   Info() {
