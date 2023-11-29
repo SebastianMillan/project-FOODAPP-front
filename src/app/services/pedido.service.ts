@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { OrderCocinero, OrderListCocineroResponse } from '../models/order-list-cocinero.interface';
 import { environment } from '../../environment/environment';
+import { PedidoDetailResponse } from '../models/PedidoDetails.interface';
 
 @Injectable({
   providedIn: 'root'
@@ -23,6 +24,14 @@ export class PedidoService {
     return this.http.put<OrderCocinero>(`${environment.apiBaseUrl}/cocinero/pedido/${id}`, {
       estadoPedido: estadoPedido
     },{
+      headers: {
+        'Authorization': `Bearer ${localStorage.getItem('token')}`
+      }
+    })
+  }
+
+  getPedidoDetails(id: string): Observable<PedidoDetailResponse>{
+    return this.http.get<PedidoDetailResponse>(`${environment.apiBaseUrl}/pedido/${id}`, {
       headers: {
         'Authorization': `Bearer ${localStorage.getItem('token')}`
       }

@@ -1,16 +1,16 @@
 <div class="container">
     <div class="row border border-light border-3 py-4 rounded-2">
         <div class="col-3 text-center mt-2">
-            <span class="text-white fs-4">{{pedidoToShow?.estadoPedido}}</span>
+            <span class="text-white fs-4">{{pedidoToShow.estadoPedido}}</span>
         </div>
         <div class="col-3 text-center mt-2">
-            <span class="text-white fs-4">{{pedidoToShow?.fecha}}</span>
+            <span class="text-white fs-4">{{pedidoToShow.fecha}}</span>
         </div>
         <div class="col-3 text-center mt-2">
-            <span class="text-white fs-4">{{pedidoToShow?.importeTotal}}€</span>
+            <span class="text-white fs-4">{{redondearImporte()}}€</span>
         </div>
         <div class="col-3 text-center">
-            <button class="btn btn-link">
+            <button class="btn btn-link" (click)="showDetails()">
                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="yellow"
                     class="bi bi-search mt-1"
                     viewBox="0 0 16 16">
