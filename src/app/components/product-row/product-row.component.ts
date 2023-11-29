@@ -1,5 +1,5 @@
 import { Component, Input, OnInit, inject } from '@angular/core';
-import { ProductRowResponse } from '../../models/product-row.interface';
+import { Product, ProductRowResponse } from '../../models/product-row.interface';
 import { ProductService } from '../../services/product.service';
 import { ActivatedRoute, Router } from '@angular/router';
 
@@ -11,7 +11,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class ProductRowComponent {
 
-  @Input() product!: ProductRowResponse;
+  @Input() product!: Product;
 
 
   id!: string;

@@ -32,8 +32,8 @@ export class CategoriaService {
     });
   }
 
-  getProdctCategory(nombreCategoria: string): Observable<ProductRowResponse[]> {
-    return this.http.get<ProductRowResponse[]>(`${environment.apiBaseUrl}/admin/producto/${nombreCategoria}`,
+  getProdctCategory(nombreCategoria: string, page: number): Observable<ProductRowResponse> {
+    return this.http.get<ProductRowResponse>(`${environment.apiBaseUrl}/admin/producto/${nombreCategoria}?page=${page}`,
       {
         headers: {
           'Authorization': `Bearer ${localStorage.getItem('token')}`

@@ -1,1 +1,4 @@
 <app-product-row *ngFor="let product of productList" [product]="product"></app-product-row>
+<ngb-pagination [collectionSize]="totalProductos" [pageSize]="cantPaginas" [maxSize]="productosPorPagina" [(page)]="pagina"
+    aria-label="Default pagination"
+    class="d-flex justify-content-center mt-5" (pageChange)="ngOnInit()"></ngb-pagination>

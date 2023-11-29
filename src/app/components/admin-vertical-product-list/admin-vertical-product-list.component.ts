@@ -17,5 +17,5 @@ export class AdminVerticalProductListComponent {
 
   addProduct() {
     this.router.navigate([`admin/add/producto`])
-    }
+  }
 }
