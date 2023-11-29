@@ -28,6 +28,10 @@ export class ModalComponent {
       });
   }
 
+  misDatos() {
+    this.route.navigate([`cliente/profile`]);
+  }
+
   cerrarSesion() {
     localStorage.clear();
     this.modalService.dismissAll('Cerrar sesión')

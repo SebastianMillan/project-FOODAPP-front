@@ -11,8 +11,7 @@
             <a [routerLink]="['/pedido']" class="nav-link">PEDIDO</a>
             <a [routerLink]="['/admin/cliente']" class="nav-link">CLIENTE</a>
         </div>
-        <button type="button" class="btn btn-outline-dark" (click)="cerrarSesion()" style="color: aliceblue;">Cerrar
-            Sesion</button>
-        <!--<app-modal-admin [admin]="admin"></app-modal-admin>-->
+
+        <app-modal-admin [admin]="admin"></app-modal-admin>
     </div>
 </nav>
