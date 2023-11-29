@@ -37,4 +37,12 @@ export class PedidoService {
       }
     })
   }
+
+  addProductoToCarrito(idPedido: string): Observable<PedidoDetailResponse>{
+    return this.http.post<PedidoDetailResponse>(`${environment.apiBaseUrl}/pedido/addProducto/${idPedido}`,{}, {
+      headers: {
+        'Authorization': `Bearer ${localStorage.getItem('token')}`
+      }
+    })
+  }
 }
