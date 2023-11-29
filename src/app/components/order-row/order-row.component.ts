@@ -9,12 +9,15 @@ import { Router } from '@angular/router';
 })
 export class OrderRowComponent {
 
-  @Input() pedidoToShow: PedidoShort | undefined;
+  @Input() pedidoToShow!: PedidoShort;
 
   constructor(private router: Router){}
 
   showDetails() {
     this.router.navigate(['/pedido', this.pedidoToShow?.id]);
+  }
 
+  redondearImporte() {
+    return Math.round(this.pedidoToShow.importeTotal * 100) / 100;
   }
 }

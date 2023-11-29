@@ -11,4 +11,8 @@ export class LineOrderRowComponent {
 
   @Input() lineaPedido!: LineasPedido;
 
+  redondearImporte() {
+    return Math.round(this.lineaPedido.subtotal * 100) / 100;
+  }
+
 }

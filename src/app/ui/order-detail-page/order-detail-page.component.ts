@@ -18,15 +18,31 @@ export class OrderDetailPageComponent {
 
 
   ngOnInit(): void {
-    this.getLineasPedido(this.idPedido);
-  }
-
-  getLineasPedido(idPedido: string){
     this.router.params.subscribe(p => this.idPedido= p['id'])
-    this.pedidoService.getPedidoDetails(idPedido).subscribe(resp => {
+    this.pedidoService.getPedidoDetails(this.idPedido).subscribe(resp => {
       this.pedido=resp;
       this.lineasPedido = resp.lineasPedido;
     })
+  }
+
+  formatName() {
+    return this.pedido?.estadoPedido.replace("_", "");
+  }
+
+  getImporteTotal() {
+    let importeTotal = 0;
+    for (let i = 0; i < this.lineasPedido.length; i++) {
+      importeTotal += this.lineasPedido[i].cantidadProductos * this.lineasPedido[i].precioUnit;      
+    }
+    return Math.round(importeTotal*100)/100;
+  }
+
+  comprobarPedidoOpen() {
+    if (this.pedido?.estadoPedido == 'ABIERTO') {
+      return true;
+    } else {
+      return false
+    }
   }
   
 }
