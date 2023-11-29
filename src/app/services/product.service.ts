@@ -5,6 +5,7 @@ import { ProductCardResponse } from '../models/product-card.interface';
 import { environment } from '../../environment/environment';
 import { ProductAllDetails } from '../models/new-product.interface';
 
+
 @Injectable({
   providedIn: 'root'
 })
