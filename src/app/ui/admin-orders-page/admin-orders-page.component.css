@@ -1,0 +1,15 @@
+.text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.linea-pedido-container {
+    padding: 10px;
+    margin-bottom: 5px;
+}
+
+.linea-pedido-container span {
+    flex: 1;
+    text-align: center;
+}

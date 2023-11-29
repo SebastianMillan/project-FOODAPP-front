@@ -1,0 +1,23 @@
+<div class="pt-3">
+    <div class="align-items-center border rounded text-white d-flex justify-content-around">
+        <div class="">
+            <span class="fs-5">{{order.cliente}}</span>
+        </div>
+        <div class="">
+            <span class="fs-5">{{order.importe.toFixed(2)}} €</span>
+        </div>
+        <div class="">
+            <span class="fs-5">{{order.fecha}}</span>
+        </div>
+        <div class="">
+            <span class="fs-5">{{formatEstadoPedidoName()}}</span>
+        </div>
+        <div class="">
+            <button class="btn btn-link" (click)="Info()"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                    fill="yellow" class="bi bi-search" viewBox="0 0 16 16">
+                    <path
+                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                </svg></button>
+        </div>
+    </div>
+</div>

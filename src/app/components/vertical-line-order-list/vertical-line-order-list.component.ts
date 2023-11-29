@@ -7,7 +7,9 @@ import { PedidoService } from '../../services/pedido.service';
   templateUrl: './vertical-line-order-list.component.html',
   styleUrl: './vertical-line-order-list.component.css'
 })
-export class VerticalLineOrderListComponent{
+
+export class VerticalLineOrderListComponent {
 
   @Input() listLineaPedido: LineasPedido[] = [];
+
 }
