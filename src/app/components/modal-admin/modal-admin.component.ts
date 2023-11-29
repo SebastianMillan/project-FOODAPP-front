@@ -2,6 +2,7 @@ import { Component, ElementRef, Input, ViewChild } from '@angular/core';
 import { Trabajador } from '../../models/Get-trabajador.interface';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Router } from '@angular/router';
+import { TrabajadorLoggedResponse } from '../../models/looged-trabajador.interface';
 
 @Component({
   selector: 'app-modal-admin',
@@ -11,12 +12,18 @@ import { Router } from '@angular/router';
 export class ModalAdminComponent {
 
   @ViewChild('miModal') miModal!: ElementRef;
-  @Input() admin!: Trabajador;
+  @Input() admin!: TrabajadorLoggedResponse;
+  nombre!: string;
+  userName!: string;
 
   constructor(private modalService: NgbModal, private route: Router) { }
 
   open(modal: any) {
+    debugger;
+    this.nombre = this.admin.nombre;
+    this.userName = this.admin.username;
     this.modalService.open(modal,
+
       {
         keyboard: false,
         size: 'sm',

@@ -6,6 +6,7 @@ import { NewTrabajadorResponse } from "../models/Add-Trabajador.interface";
 import { environment } from "../../environment/environment";
 import { Trabajador } from "../models/Get-trabajador.interface";
 import { PuestoResponse } from "../models/PuestoTrabajador.interface";
+import { TrabajadorLoggedResponse } from "../models/looged-trabajador.interface";
 
 @Injectable({
   providedIn: 'root'
@@ -72,6 +73,14 @@ export class TrabajadorServiceTsService {
 
   getTrabajadorPuesto(id: string): Observable<PuestoResponse> {
     return this.http.get<PuestoResponse>(`${environment.apiBaseUrl}/trabajador/puesto/${id}`, {
+      headers: {
+        'Authorization': `Bearer ${localStorage.getItem('token')}`
+      }
+    })
+  }
+
+  getTrabajadoLogged(): Observable<TrabajadorLoggedResponse> {
+    return this.http.get<TrabajadorLoggedResponse>(`${environment.apiBaseUrl}/trabajador/profile`, {
       headers: {
         'Authorization': `Bearer ${localStorage.getItem('token')}`
       }

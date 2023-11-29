@@ -1,6 +1,6 @@
 <ng-template #miModal let-modal>
     <div class="modal-header">
-        <h4 class="modal-title" id="modal-basic-title">{{admin.nombre}}</h4>
+        <h4 class="modal-title" id="modal-basic-title">{{nombre}}</h4>
         <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
     </div>
     <div class="modal-body">
@@ -9,7 +9,7 @@
                 <label for="dateOfBirth">{{admin.puesto}}</label>
             </div>
             <h5>User</h5>
-            <p>{{admin.username}}</p>
+            <p>{{userName}}</p>
         </form>
     </div>
     <div class="modal-footer">
