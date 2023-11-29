@@ -1,1 +1,20 @@
-<p>delivery-page works!</p>
+<div class="container">
+    <div class="row">
+        <div class="col-1">     
+        </div>
+        <div class="col-5">
+            <h3 class="text-white">Cliente</h3>
+        </div>
+        <div class="col-3 text-center">
+            <h3 class="text-white text-center">Fecha</h3>
+        </div>
+        <div class="col-3 text-center">
+            <h3 class="text-white text-center">Estado Pedido</h3>
+        </div>
+    </div>
+</div>
+<app-vertical-delivery-list [pedidosRepartidor]="pedidosRepartidor"></app-vertical-delivery-list>
+<ngb-pagination [collectionSize]="totalPedidos" [pageSize]="cantPaginas" [maxSize]="pedidosPorPagina" [(page)]="pagina"
+    aria-label="Default pagination"
+    class="d-flex justify-content-center mt-5" (pageChange)="ngOnInit()"></ngb-pagination>
+

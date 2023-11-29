@@ -19,6 +19,7 @@ import { FormEditTrabajadorComponent } from './ui/form-edit-trabajador/form-edit
 import { OrderDetailPageComponent } from './ui/order-detail-page/order-detail-page.component';
 import { AdminOrdersPageComponent } from './ui/admin-orders-page/admin-orders-page.component';
 import { VerticalLineOrderListComponent } from './components/vertical-line-order-list/vertical-line-order-list.component';
+import { DeliveryPageComponent } from './ui/delivery-page/delivery-page.component';
 
 
 
@@ -29,6 +30,7 @@ const routes: Routes = [
   { path: 'admin/trabajador/edit/form/:id', component: FormEditTrabajadorComponent },
   { path: 'admin/trabajador', component: AdminWorkersPageComponent },
   { path: 'cocinero/pedidos', component: CookPageComponent },
+  { path: 'repartidor/pedidos', component: DeliveryPageComponent },
   { path: 'pedido/:id', component: OrderDetailPageComponent },
   { path: 'admin/categorias', component: AdminCategoriesPageComponent },
   { path: 'login', component: LoginPageComponent },
