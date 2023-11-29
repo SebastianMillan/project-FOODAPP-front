@@ -25,6 +25,8 @@ export class LoginPageComponent implements OnInit {
   constructor(private accountService: AccountService, private router: Router, private trabajadorService: TrabajadorServiceTsService) { }
 
   ngOnInit(): void {
+    localStorage.clear();
+
     let token = localStorage.getItem('token');
 
     if (token != null) {
