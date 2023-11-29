@@ -53,6 +53,7 @@ import { UserDetailPageComponent } from './ui/user-detail-page/user-detail-page.
 import { ProductEditPageComponent } from './ui/product-edit-page/product-edit-page.component';
 import { UserEditPageComponent } from './ui/user-edit-page/user-edit-page.component';
 import { FormEditTrabajadorComponent } from './ui/form-edit-trabajador/form-edit-trabajador.component';
+import { AdminRowVerticalComponent } from './components/admin-row-vertical/admin-row-vertical.component';
 
 
 
@@ -108,7 +109,8 @@ import { FormEditTrabajadorComponent } from './ui/form-edit-trabajador/form-edit
     ProductEditPageComponent,
     UserEditPageComponent,
     UserEditPageComponent,
-    FormEditTrabajadorComponent
+    FormEditTrabajadorComponent,
+    AdminRowVerticalComponent
 
   ],
   imports: [

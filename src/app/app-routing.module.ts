@@ -17,6 +17,7 @@ import { MenuPageComponent } from './ui/menu-page/menu-page.component';
 import { CookPageComponent } from './ui/cook-page/cook-page.component';
 import { FormEditTrabajadorComponent } from './ui/form-edit-trabajador/form-edit-trabajador.component';
 import { OrderDetailPageComponent } from './ui/order-detail-page/order-detail-page.component';
+import { AdminOrdersPageComponent } from './ui/admin-orders-page/admin-orders-page.component';
 
 
 const routes: Routes = [
@@ -35,8 +36,8 @@ const routes: Routes = [
   { path: 'register', component: RegisterPageComponent },
   { path: 'admin/add/producto', component: AdminProductDetailPageComponent },
   { path: 'admin/edit/producto/:id', component: ProductEditPageComponent },
-  { path: 'admin/pedidos', component: OrderDetailPageComponent},
-  { path: 'menu', component: MenuPageComponent},
+  { path: 'admin/pedidos', component: AdminOrdersPageComponent },
+  { path: 'menu', component: MenuPageComponent },
   { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: '**', component: HomePageComponent },
 ];
