@@ -7,22 +7,7 @@ import { PedidoService } from '../../services/pedido.service';
   templateUrl: './vertical-line-order-list.component.html',
   styleUrl: './vertical-line-order-list.component.css'
 })
-export class VerticalLineOrderListComponent implements OnInit{
+export class VerticalLineOrderListComponent{
 
   @Input() listLineaPedido: LineasPedido[] = [];
-  idPedido!: string;
-
-  constructor(private pedidoService: PedidoService){}
-
-
-  ngOnInit(): void {
-    this.getLineasPedido(this.idPedido);
-  }
-
-  getLineasPedido(idPedido: string){
-    
-    this.pedidoService.getPedidoDetails(idPedido).subscribe(resp => {
-      this.listLineaPedido = resp.lineasPedido;
-    })
-  }
 }

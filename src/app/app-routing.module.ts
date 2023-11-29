@@ -25,7 +25,7 @@ const routes: Routes = [
   { path: 'admin/trabajador/edit/form/:id', component: FormEditTrabajadorComponent },
   { path: 'admin/trabajador', component: AdminWorkersPageComponent },
   { path: 'cocinero/pedidos', component: CookPageComponent },
-  { path: 'pedido/:id', component: VerticalLineOrderListComponent },
+  { path: 'pedido/:id', component: OrderDetailPageComponent },
   { path: 'admin/categorias', component: AdminCategoriesPageComponent },
   { path: 'login', component: LoginPageComponent },
   { path: 'profile', component: UserDetailPageComponent },
