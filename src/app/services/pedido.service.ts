@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { OrderCocinero, OrderListCocineroResponse } from '../models/order-list-cocinero.interface';
 import { environment } from '../../environment/environment';
 import { PedidoDetailResponse } from '../models/PedidoDetails.interface';
+import { PedidosRepartidorResponse } from '../models/PedidoRepartidor.interface';
 
 @Injectable({
   providedIn: 'root'
@@ -38,8 +39,16 @@ export class PedidoService {
     })
   }
 
+  getPedidosRepartidor(page:number): Observable<PedidosRepartidorResponse>{
+    return this.http.get<PedidosRepartidorResponse>(`${environment.apiBaseUrl}/repartidor/pedido?page=${page}`,{
+      headers: {
+        'Authorization': `Bearer ${localStorage.getItem('token')}`
+      }
+    })
+  }
+
   addProductoToCarrito(idPedido: string): Observable<PedidoDetailResponse>{
-    return this.http.post<PedidoDetailResponse>(`${environment.apiBaseUrl}/pedido/addProducto/${idPedido}`,{}, {
+    return this.http.post<PedidoDetailResponse>(`${environment.apiBaseUrl}/pedido/addProducto/${idPedido}`, {
       headers: {
         'Authorization': `Bearer ${localStorage.getItem('token')}`
       }

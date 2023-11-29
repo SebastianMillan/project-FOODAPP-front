@@ -19,6 +19,7 @@ import { FormEditTrabajadorComponent } from './ui/form-edit-trabajador/form-edit
 import { OrderDetailPageComponent } from './ui/order-detail-page/order-detail-page.component';
 import { AdminOrdersPageComponent } from './ui/admin-orders-page/admin-orders-page.component';
 import { VerticalLineOrderListComponent } from './components/vertical-line-order-list/vertical-line-order-list.component';
+import { DeliveryPageComponent } from './ui/delivery-page/delivery-page.component';
 
 import { ClientSectionComponent } from './sections/client-section/client-section.component';
 import { AdminSectionComponent } from './sections/admin-section/admin-section.component';
@@ -27,6 +28,7 @@ import { CocineroSectionComponent } from './sections/cocinero-section/cocinero-s
 
 
 const routes: Routes = [
+<<<<<<< HEAD
   {
     path: 'cliente', component: ClientSectionComponent, children: [
       { path: 'profile', component: UserDetailPageComponent },
@@ -59,6 +61,17 @@ const routes: Routes = [
   },
 
 
+=======
+  { path: 'home', component: HomePageComponent },
+  { path: 'admin/categorias/:nombreCategoria', component: AdminVerticalProductListComponent },
+  { path: 'admin/trabajador/form', component: FormTrabajadorComponent },
+  { path: 'admin/trabajador/edit/form/:id', component: FormEditTrabajadorComponent },
+  { path: 'admin/trabajador', component: AdminWorkersPageComponent },
+  { path: 'cocinero/pedidos', component: CookPageComponent },
+  { path: 'repartidor/pedidos', component: DeliveryPageComponent },
+  { path: 'pedido/:id', component: OrderDetailPageComponent },
+  { path: 'admin/categorias', component: AdminCategoriesPageComponent },
+>>>>>>> main
   { path: 'login', component: LoginPageComponent },
   { path: 'register', component: RegisterPageComponent },
   { path: 'menu', component: MenuPageComponent },
