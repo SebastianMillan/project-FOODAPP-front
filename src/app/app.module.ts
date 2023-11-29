@@ -53,7 +53,17 @@ import { UserDetailPageComponent } from './ui/user-detail-page/user-detail-page.
 import { ProductEditPageComponent } from './ui/product-edit-page/product-edit-page.component';
 import { UserEditPageComponent } from './ui/user-edit-page/user-edit-page.component';
 import { FormEditTrabajadorComponent } from './ui/form-edit-trabajador/form-edit-trabajador.component';
+import { ModalComponent } from './components/modal/modal.component';
+import { ClientSectionComponent } from './sections/client-section/client-section.component';
+import { BotonEditTrabajadorComponent } from './components/boton-edit-trabajador/boton-edit-trabajador.component';
+import { AdminSectionComponent } from './sections/admin-section/admin-section.component';
+import { ModalAdminComponent } from './components/modal-admin/modal-admin.component';
+import { CocineroSectionComponent } from './sections/cocinero-section/cocinero-section.component';
+import { TrabajadorNavbarComponent } from './components/trabajador-navbar/trabajador-navbar.component';
+
 import { AdminRowVerticalComponent } from './components/admin-row-vertical/admin-row-vertical.component';
+import { RepartidorSectionComponent } from './sections/repartidor-section/repartidor-section.component';
+
 
 
 
@@ -109,9 +119,24 @@ import { AdminRowVerticalComponent } from './components/admin-row-vertical/admin
     ProductEditPageComponent,
     UserEditPageComponent,
     UserEditPageComponent,
+
+
+    FormEditTrabajadorComponent,
+    ModalComponent,
+    ClientSectionComponent,
+    BotonEditTrabajadorComponent,
+    AdminSectionComponent,
+    ModalAdminComponent,
+    CocineroSectionComponent,
+    TrabajadorNavbarComponent,
+
+
+
+
     FormEditTrabajadorComponent,
     AdminRowVerticalComponent,
-    FormEditTrabajadorComponent
+    FormEditTrabajadorComponent,
+    RepartidorSectionComponent
 
   ],
   imports: [

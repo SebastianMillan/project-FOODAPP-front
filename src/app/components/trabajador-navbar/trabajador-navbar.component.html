@@ -6,9 +6,12 @@
             </a>
         </div>
         <div class="nav-item d-flex justitfy-content-center">
-            <a [routerLink]="['/cliente/home']" routerLinkActive="router-link-active" class="nav-link">HOME</a>
-            <a [routerLink]="['/cliente/menu']" class="nav-link">CARTA</a>
+            <a [routerLink]="['/admin/trabajador']" class="nav-link">TRABAJADOR</a>
+            <a [routerLink]="['/pedido']" class="nav-link">CATEGORIA</a>
+            <a [routerLink]="['/pedido']" class="nav-link">PEDIDO</a>
+            <a [routerLink]="['/admin/cliente']" class="nav-link">CLIENTE</a>
         </div>
-        <app-modal [usuarioLogueado]="usuarioLogueado" style="color: aliceblue;"></app-modal>
+
+        <app-modal-admin [admin]="admin"></app-modal-admin>
     </div>
 </nav>

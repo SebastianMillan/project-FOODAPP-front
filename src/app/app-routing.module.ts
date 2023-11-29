@@ -21,28 +21,59 @@ import { AdminOrdersPageComponent } from './ui/admin-orders-page/admin-orders-pa
 import { VerticalLineOrderListComponent } from './components/vertical-line-order-list/vertical-line-order-list.component';
 import { DeliveryPageComponent } from './ui/delivery-page/delivery-page.component';
 
+import { ClientSectionComponent } from './sections/client-section/client-section.component';
+import { AdminSectionComponent } from './sections/admin-section/admin-section.component';
+import { CocineroSectionComponent } from './sections/cocinero-section/cocinero-section.component';
+import { RepartidorSectionComponent } from './sections/repartidor-section/repartidor-section.component';
+
 
 
 const routes: Routes = [
-  { path: 'home', component: HomePageComponent },
-  { path: 'admin/categorias/:nombreCategoria', component: AdminVerticalProductListComponent },
-  { path: 'admin/trabajador/form', component: FormTrabajadorComponent },
-  { path: 'admin/trabajador/edit/form/:id', component: FormEditTrabajadorComponent },
-  { path: 'admin/trabajador', component: AdminWorkersPageComponent },
-  { path: 'cocinero/pedidos', component: CookPageComponent },
-  { path: 'repartidor/pedidos', component: DeliveryPageComponent },
+
+  {
+    path: 'cliente', component: ClientSectionComponent, children: [
+      { path: 'profile', component: UserDetailPageComponent },
+      { path: 'profile/edit', component: UserEditPageComponent },
+      { path: 'menu', component: MenuPageComponent },
+      { path: 'home', component: HomePageComponent },
+    ]
+  },
+  {
+    path: 'admin', component: AdminSectionComponent, children: [
+      { path: 'categorias/:nombreCategoria', component: AdminVerticalProductListComponent },
+      { path: 'trabajador/form', component: FormTrabajadorComponent },
+      { path: 'trabajador/edit/form/:id', component: FormEditTrabajadorComponent },
+      { path: 'trabajador', component: AdminWorkersPageComponent },
+      { path: 'categorias', component: AdminCategoriesPageComponent },
+      { path: 'cliente', component: AdminClientsPageComponent },
+      { path: 'cliente/:id', component: AdminClientDetailPageComponent },
+      { path: 'add/producto', component: AdminProductDetailPageComponent },
+      { path: 'edit/producto/:id', component: ProductEditPageComponent },
+      { path: 'add/producto', component: AdminProductDetailPageComponent },
+      { path: 'edit/producto/:id', component: ProductEditPageComponent },
+      { path: 'pedidos', component: AdminOrdersPageComponent },
+
+    ]
+  },
+  {
+    path: 'cocinero', component: CocineroSectionComponent, children: [
+      { path: 'pedidos', component: CookPageComponent },
+    ]
+  },
+
+  {
+    path: 'repartidor', component: RepartidorSectionComponent, children: [
+      { path: 'pedidos', component: DeliveryPageComponent },
+    ]
+  },
+
+
+
+
   { path: 'pedido/:id', component: OrderDetailPageComponent },
-  { path: 'admin/categorias', component: AdminCategoriesPageComponent },
   { path: 'login', component: LoginPageComponent },
-  { path: 'profile', component: UserDetailPageComponent },
-  { path: 'profile/edit', component: UserEditPageComponent },
-  { path: 'admin/cliente', component: AdminClientsPageComponent },
-  { path: 'admin/cliente/:id', component: AdminClientDetailPageComponent },
-  { path: 'register', component: RegisterPageComponent },
-  { path: 'admin/add/producto', component: AdminProductDetailPageComponent },
-  { path: 'admin/edit/producto/:id', component: ProductEditPageComponent },
-  { path: 'admin/pedidos', component: AdminOrdersPageComponent },
-  { path: 'menu', component: MenuPageComponent },
+
+
   { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: '**', component: HomePageComponent },
 ];
