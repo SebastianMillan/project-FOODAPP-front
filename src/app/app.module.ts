@@ -62,6 +62,7 @@ import { CocineroSectionComponent } from './sections/cocinero-section/cocinero-s
 import { TrabajadorNavbarComponent } from './components/trabajador-navbar/trabajador-navbar.component';
 
 import { AdminRowVerticalComponent } from './components/admin-row-vertical/admin-row-vertical.component';
+import { RepartidorSectionComponent } from './sections/repartidor-section/repartidor-section.component';
 
 
 
@@ -134,7 +135,8 @@ import { AdminRowVerticalComponent } from './components/admin-row-vertical/admin
 
     FormEditTrabajadorComponent,
     AdminRowVerticalComponent,
-    FormEditTrabajadorComponent
+    FormEditTrabajadorComponent,
+    RepartidorSectionComponent
 
   ],
   imports: [

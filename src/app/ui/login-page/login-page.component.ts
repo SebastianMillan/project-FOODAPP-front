@@ -57,6 +57,8 @@ export class LoginPageComponent implements OnInit {
       } else if (this.rol.includes('TRABAJADOR')) {
         if (this.puesto == 'COCINERO') {
           this.router.navigateByUrl('cocinero/pedidos');
+        } else if (this.puesto == 'REPARTIDOR') {
+          this.router.navigateByUrl('repartidor/pedidos');
         }
       } else {
         this.router.navigateByUrl('/login');

@@ -24,11 +24,12 @@ import { DeliveryPageComponent } from './ui/delivery-page/delivery-page.componen
 import { ClientSectionComponent } from './sections/client-section/client-section.component';
 import { AdminSectionComponent } from './sections/admin-section/admin-section.component';
 import { CocineroSectionComponent } from './sections/cocinero-section/cocinero-section.component';
+import { RepartidorSectionComponent } from './sections/repartidor-section/repartidor-section.component';
 
 
 
 const routes: Routes = [
-<<<<<<< HEAD
+
   {
     path: 'cliente', component: ClientSectionComponent, children: [
       { path: 'profile', component: UserDetailPageComponent },
@@ -60,21 +61,18 @@ const routes: Routes = [
     ]
   },
 
+  {
+    path: 'repartidor', component: RepartidorSectionComponent, children: [
+      { path: 'pedidos', component: DeliveryPageComponent },
+    ]
+  },
 
-=======
-  { path: 'home', component: HomePageComponent },
-  { path: 'admin/categorias/:nombreCategoria', component: AdminVerticalProductListComponent },
-  { path: 'admin/trabajador/form', component: FormTrabajadorComponent },
-  { path: 'admin/trabajador/edit/form/:id', component: FormEditTrabajadorComponent },
-  { path: 'admin/trabajador', component: AdminWorkersPageComponent },
-  { path: 'cocinero/pedidos', component: CookPageComponent },
-  { path: 'repartidor/pedidos', component: DeliveryPageComponent },
+
+
+
   { path: 'pedido/:id', component: OrderDetailPageComponent },
-  { path: 'admin/categorias', component: AdminCategoriesPageComponent },
->>>>>>> main
   { path: 'login', component: LoginPageComponent },
-  { path: 'register', component: RegisterPageComponent },
-  { path: 'menu', component: MenuPageComponent },
+
 
   { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: '**', component: HomePageComponent },
