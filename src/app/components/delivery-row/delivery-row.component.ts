@@ -12,6 +12,7 @@ export class DeliveryRowComponent {
   @Input() pedido!: Pedidos;
   estadoPedido: string = '';
   mostrarDetalles: boolean = false;
+  fechaArreglada: string = '';
 
   constructor(private pedidoService: PedidoService){}
 
@@ -31,6 +32,11 @@ export class DeliveryRowComponent {
 
   formatEstadoPedidoName() {
     return this.pedido.estadoPedido.replace('_', ' ');
+  }
+
+  arreglarFecha() {
+    this.fechaArreglada = this.pedido.fecha;
+    return this.fechaArreglada.substring(0, 16);
   }
   
 }
