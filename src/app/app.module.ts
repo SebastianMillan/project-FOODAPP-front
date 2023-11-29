@@ -115,6 +115,7 @@ import { TrabajadorNavbarComponent } from './components/trabajador-navbar/trabaj
     ProductEditPageComponent,
     UserEditPageComponent,
     UserEditPageComponent,
+
     FormEditTrabajadorComponent,
     ModalComponent,
     ClientSectionComponent,
@@ -123,6 +124,9 @@ import { TrabajadorNavbarComponent } from './components/trabajador-navbar/trabaj
     ModalAdminComponent,
     CocineroSectionComponent,
     TrabajadorNavbarComponent
+
+
+
 
   ],
   imports: [

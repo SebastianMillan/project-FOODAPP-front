@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { LineasPedido } from '../../models/PedidoDetails.interface'; 
+
 
 @Component({
   selector: 'app-line-order-row',
@@ -6,5 +8,11 @@ import { Component } from '@angular/core';
   styleUrl: './line-order-row.component.css'
 })
 export class LineOrderRowComponent {
+
+  @Input() lineaPedido!: LineasPedido;
+
+  redondearImporte() {
+    return Math.round(this.lineaPedido.subtotal * 100) / 100;
+  }
 
 }
