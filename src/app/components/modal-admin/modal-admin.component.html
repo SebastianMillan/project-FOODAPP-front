@@ -1,0 +1,19 @@
+<ng-template #miModal let-modal>
+    <div class="modal-header">
+        <h4 class="modal-title" id="modal-basic-title">{{admin.nombre}}</h4>
+        <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+    </div>
+    <div class="modal-body">
+        <form>
+            <div class="mb-3">
+                <label for="dateOfBirth">{{admin.puesto}}</label>
+            </div>
+            <h5>User</h5>
+            <p>{{userName}}</p>
+        </form>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-outline-dark" (click)="cerrarSesion()">Cerrar Sesion</button>
+    </div>
+</ng-template>
+<button class="btn btn-lg btn-outline-light me-5" (click)="open(miModal)">{{admin.nombre}}</button>

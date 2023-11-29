@@ -15,14 +15,14 @@ export class RegisterPageComponent {
   nombre = '';
   email = '';
 
-  constructor(private accountService: AccountService, private router:Router) { }
-  
+  constructor(private accountService: AccountService, private router: Router) { }
+
   sendRegistro() {
     this.accountService.registerClient(this.username, this.password, this.verifyPassword, this.avatar, this.nombre, this.email).subscribe(resp => {
       this.accountService.loginAccount(this.username, this.password).subscribe(respok => {
-        localStorage.setItem('account_id',respok.id)
-        localStorage.setItem('token', respok.token); 
-        this.router.navigateByUrl('/home');
+        localStorage.setItem('account_id', respok.id)
+        localStorage.setItem('token', respok.token);
+        this.router.navigateByUrl('/cliente/home');
       })
     })
   }

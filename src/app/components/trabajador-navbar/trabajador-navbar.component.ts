@@ -1,19 +1,16 @@
-import { Component, OnInit } from '@angular/core';
-import { ClientDetailResponse } from '../../models/client-detail.interface';
-import { AdminService } from '../../services/admin.service';
+import { Component } from '@angular/core';
+import { Trabajador } from '../../models/Get-trabajador.interface';
+import { TrabajadorServiceTsService } from '../../services/trabajador.service.ts.service';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Router } from '@angular/router';
-import { TrabajadorServiceTsService } from '../../services/trabajador.service.ts.service';
-import { Trabajador } from '../../models/Get-trabajador.interface';
 import { TrabajadorLoggedResponse } from '../../models/looged-trabajador.interface';
 
 @Component({
-  selector: 'app-admin-navbar',
-  templateUrl: './admin-navbar.component.html',
-  styleUrl: './admin-navbar.component.css'
+  selector: 'app-trabajador-navbar',
+  templateUrl: './trabajador-navbar.component.html',
+  styleUrl: './trabajador-navbar.component.css'
 })
-export class AdminNavbarComponent implements OnInit {
-
+export class TrabajadorNavbarComponent {
   admin!: TrabajadorLoggedResponse;
   accountId!: string;
 

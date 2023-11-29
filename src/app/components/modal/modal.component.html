@@ -1,0 +1,29 @@
+<ng-template #miModal let-modal>
+    <div class="modal-header">
+        <h4 class="modal-title" id="modal-basic-title">{{usuarioLogueado.nombre}}</h4>
+        <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+    </div>
+    <div class="modal-body">
+        <form>
+            <div class="mb-3">
+                <label for="dateOfBirth">Puntos: {{usuarioLogueado.puntos}}</label>
+            </div>
+            <h5>Dirección de envio:</h5>
+            <p>{{usuarioLogueado.direccion}}</p>
+        </form>
+    </div>
+    <div>
+        <button type="button" class="btn btn-outline-dark" (click)="misDatos()">Mis Datos</button>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-outline-dark" (click)="cerrarSesion()">Cerrar Sesion</button>
+    </div>
+</ng-template>
+
+<ng-container *ngIf="usuarioLogueado.avatar">
+    <img src="{{usuarioLogueado.avatar}}" class="rounded-circle me-5" (click)="open(miModal)" width="50px"
+        height="50px">
+</ng-container>
+<ng-container *ngIf="!usuarioLogueado.avatar">
+    <button class="btn btn-lg btn-outline-light me-5" (click)="open(miModal)">{{usuarioLogueado.nombre}}</button>
+</ng-container>

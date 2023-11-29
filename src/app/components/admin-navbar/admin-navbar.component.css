@@ -1,0 +1,11 @@
+a {
+    color: aliceblue;
+}
+
+.navbar-nav a:hover {
+    color: yellow;
+}
+
+.butoton:hover {
+    color: yellow;
+}
