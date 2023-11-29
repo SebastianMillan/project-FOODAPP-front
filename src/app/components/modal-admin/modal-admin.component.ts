@@ -22,15 +22,14 @@ export class ModalAdminComponent {
     debugger;
     this.nombre = this.admin.nombre;
     this.userName = this.admin.username;
-    this.modalService.open(modal,
-
-      {
-        keyboard: false,
-        size: 'sm',
-        backdrop: false,
-
-        scrollable: true
-      });
+    console.log(this.nombre); // Verificar si se muestra el nombre correctamente
+    console.log(this.userName); // Verificar si se muestra el nombre de usuario correctamente
+    this.modalService.open(modal, {
+      keyboard: false,
+      size: 'sm',
+      backdrop: false,
+      scrollable: true
+    });
   }
 
   cerrarSesion() {
