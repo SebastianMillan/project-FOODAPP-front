@@ -1,38 +1,39 @@
-<!-- <div class="container mt-5">
-    <div class="d-flex justify-content-around">
-        <div class="col-3 text-center text-light">
-            <h3 class="ms-4" style="color: #FFC529;">ID_CLIENTE</h3>
-        </div>
-        <div class="col-2 text-center text-light">
-            <h3 class="ms-2" style="color: #FFC529;">IMPORTE</h3>
-        </div>
-        <div class="col-2 text-center text-light">
-            <h3 class="me-2" style="color: #FFC529;">FECHA</h3>
-        </div> 
-        <div class="col-2 text-light text-center">
-            <h3 class="me-3" style="color: #FFC529;">ESTADO</h3>
-        </div>
-        <div class="col-2 text-light text-center">
-            <h3 class="me-4" style="color: #FFC529;">Detalles</h3>
-        </div>
+<div class="container mt-5">
+  <div class="d-flex justify-content-around">
+    <div class=" text-center text-light">
+      <h3 class="ms-4" style="color: #FFC529;">ID_CLIENTE</h3>
     </div>
-    <app-line-order-row *ngFor="let o of orderList" [order]="o"  (orderClick)="open(o.id, lnModal)"></app-line-order-row>
-
+    <div class=" text-center text-light">
+      <h3 class="ms-2" style="color: #FFC529;">IMPORTE</h3>
+    </div>
+    <div class=" text-center text-light">
+      <h3 class="me-2" style="color: #FFC529;">FECHA</h3>
+    </div>
+    <div class=" text-light text-center">
+      <h3 class="me-3" style="color: #FFC529;">ESTADO</h3>
+    </div>
+    <div class=" text-light text-center">
+      <h3 class="me-4" style="color: #FFC529;">Detalles</h3>
+    </div>
+  </div>
+  <!-- <app-line-order-row *ngFor=" let o of orderList" [order]="o" (orderClick)="open(o.id, lnModal)">
+    </app-line-order-row> -->
+  <app-line-order-row *ngFor="let o of orderList" [order]="o"></app-line-order-row>
 </div>
 
-@for (ln of ln; track $index) {
-    <ng-template #lnModal let-modal>
-        <div class="modal-header">
-          <h4 class="modal-title" id="modal-basic-title">{{ln.producto}}</h4>
-          <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
-        </div>
-        <div class="modal-body">
-          <span><strong>Adult: </strong>{{ln.precioUnitario}}</span>
-          <span><strong>Original lenguage: </strong>X{{ln.cantidad}} €</span>
-          <span><strong>Description: </strong>{{OrderSelected.importe}} €</span>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Save</button>
-        </div>
-      </ng-template>
-    } -->
+<!-- @for (ln of ln; track $index) {
+<ng-template #lnModal let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">{{ln.producto}}</h4>
+    <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+  </div>
+  <div class="modal-body">
+    <span><strong>Adult: </strong>{{ln.precioUnitario}}</span>
+    <span><strong>Original lenguage: </strong>X{{ln.cantidad}} €</span>
+    <span><strong>Description: </strong>{{OrderSelected.importe}} €</span>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Save</button>
+  </div>
+</ng-template>
+} -->

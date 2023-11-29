@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Ln, OrderDetailsResponse } from '../../models/order-details.interface';
+import { OrderDetailsResponse } from '../../models/order-details.interface';
 import { OrderService } from '../../services/order.service';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
@@ -8,14 +8,12 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
   templateUrl: './vertical-line-order-list.component.html',
   styleUrl: './vertical-line-order-list.component.css'
 })
-export class VerticalLineOrderListComponent implements OnInit{
+export class VerticalLineOrderListComponent implements OnInit {
 
-  orderList: OrderDetailsResponse [] = [];
+  orderList: OrderDetailsResponse[] = [];
   OrderSelected!: OrderDetailsResponse;
 
-  @Input() ln!: Ln[]
-
-  constructor(private service: OrderService, private modalService: NgbModal) {}
+  constructor(private service: OrderService, private modalService: NgbModal) { }
 
   ngOnInit(): void {
     this.service.getOrderDetails().subscribe(resp => {
