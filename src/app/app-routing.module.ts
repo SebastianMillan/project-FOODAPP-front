@@ -18,6 +18,7 @@ import { CookPageComponent } from './ui/cook-page/cook-page.component';
 import { FormEditTrabajadorComponent } from './ui/form-edit-trabajador/form-edit-trabajador.component';
 import { ClientSectionComponent } from './sections/client-section/client-section.component';
 import { AdminSectionComponent } from './sections/admin-section/admin-section.component';
+import { CocineroSectionComponent } from './sections/cocinero-section/cocinero-section.component';
 
 
 const routes: Routes = [
@@ -40,15 +41,21 @@ const routes: Routes = [
       { path: 'cliente/:id', component: AdminClientDetailPageComponent },
       { path: 'add/producto', component: AdminProductDetailPageComponent },
       { path: 'edit/producto/:id', component: ProductEditPageComponent },
+      { path: 'admin/add/producto', component: AdminProductDetailPageComponent },
+      { path: 'admin/edit/producto/:id', component: ProductEditPageComponent },
+    ]
+  },
+  {
+    path: 'cocinero', component: CocineroSectionComponent, children: [
+      { path: 'pedidos', component: CookPageComponent },
     ]
   },
 
-  { path: 'cocinero/pedidos', component: CookPageComponent },
+
   { path: 'login', component: LoginPageComponent },
   { path: 'register', component: RegisterPageComponent },
 
-  { path: 'admin/add/producto', component: AdminProductDetailPageComponent },
-  { path: 'admin/edit/producto/:id', component: ProductEditPageComponent },
+
   { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: '**', component: HomePageComponent },
 ];

@@ -1,3 +1,7 @@
 a {
     color: white;
 }
+
+.navbar-nav a:hover {
+    color: yellow;
+}
